@@ -1,2 +1,4 @@
 # Build and Release Folders
 pico-sdk/
+CMakeFiles/
+CMakeCache.txt
