@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -yq \
     gcc-arm-none-eabi \
     libnewlib-arm-none-eabi \
     build-essential \
+    libstdc++-arm-none-eabi-newlib \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/*
 
 # Create the gitpod user. UID must be 33333.
