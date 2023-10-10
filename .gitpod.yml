@@ -1,4 +1,4 @@
 tasks:
-  - command: git clone https://github.com/raspberrypi/pico-sdk.git && cd pico-sdk && git submodule update --init && cd ..
+  - command: git clone https://github.com/raspberrypi/pico-sdk.git && cd pico-sdk && git submodule update --init && cd .. && export PICO_SDK_PATH=pico-sdk/ && cmake .. && make -j4
 image:
   file: .gitpod.Dockerfile
