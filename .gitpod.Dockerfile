@@ -22,5 +22,3 @@ RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod
 
 USER gitpod
 
-RUN git clone https://github.com/raspberrypi/pico-sdk.git
-RUN cd pico-sdk && git submodule update – -init
