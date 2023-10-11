@@ -39,16 +39,7 @@ jobs:
       uses: xresloader/upload-to-github-release@v1
       with:
         file: |
-          build/*.uf2
-          build/*.bin
-          build/*.elf
-          build/*.hex
-          build/*.dis
-          *.uf2
-          *.bin
-          *.elf
-          *.hex
-          *.dis
+          helloworld.uf2
         #  ${{steps.sign_app.outputs.signedReleaseFile}}
         tag_name: ${{ github.run_id }}
         draft: false
