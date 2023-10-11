@@ -1,8 +1,8 @@
 name: CMake
 on:
   push:
-    branches-ignore:
-      - 'iar/**'
+    branches:
+      - main
   pull_request:
 
 env:
