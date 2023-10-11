@@ -33,7 +33,7 @@ jobs:
       # We'll use this as our working directory for all subsequent commands
       run: sudo apt-get update && sudo apt-get install -yq git git-lfs sudo cmake gcc-arm-none-eabi  libnewlib-arm-none-eabi build-essential libstdc++-arm-none-eabi-newlib python3 python3-pip 
     - name: Compile
-      run: git clone https://github.com/raspberrypi/pico-sdk.git && cd pico-sdk && git submodule update --init && cd .. && export PICO_SDK_PATH=../pico-sdk && mkdir build && cd build && cmake .. && make -j4 cd ..
+      run: git clone https://github.com/raspberrypi/pico-sdk.git && cd pico-sdk && git submodule update --init && cd .. && export PICO_SDK_PATH=../pico-sdk && mkdir build && cd build && cmake .. && make -j4 && cd ..
       #credit to https://github.com/raspberrypi/pico-sdk/blob/master/.github/workflows/cmake.yml
     - name: Upload to Release
       uses: xresloader/upload-to-github-release@v1
