@@ -22,3 +22,9 @@ pico_add_extra_outputs(helloworld)
 # example_auto_set_url(helloworld)
 #https://github.com/raspberrypi/pico-examples/blob/master/hello_world/serial/CMakeLists.txt
 
+# Enable USB stdio for the "test" target (used for serial communication)
+pico_enable_stdio_usb(helloworld 1)
+
+# Disable UART stdio for the "test" target
+pico_enable_stdio_uart(helloworld 0)
+#https://www.exasub.com/development-kit/raspberry-pi-pico/how-to-use-c-sdk-to-create-uf2-file-which-interface-ultrasonic-sensor-with-raspberry-pi-pico/
