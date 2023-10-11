@@ -13,3 +13,4 @@ src/test/
 src/tools/
 src/Makefile
 src/cmake_install.cmake
+build/
