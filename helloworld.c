@@ -10,7 +10,6 @@
 void main() {
     stdio_init_all();
     int num1,num2;
-    clrscr();
     printf("Enter first number: ");
     scanf("%d",&num1);
     printf("First number is: %d",num1);
