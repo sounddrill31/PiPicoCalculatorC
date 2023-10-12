@@ -9,8 +9,12 @@
 
 int main() {
     stdio_init_all();
-    while (true) {
-        printf("Hello, world!\n");
-        sleep_ms(1000);
-    }
+    int num1,num2;
+    printf("Enter first number: ");
+    scanf("%d",&num1);
+    printf("First number is: %d",num1);
+    //while (true) {
+    //    printf("Hello, world!\n");
+    //    sleep_ms(1000);
+    //}
 }
