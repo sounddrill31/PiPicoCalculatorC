@@ -32,8 +32,8 @@ int main() {
             printf("The multiplication of the two numbers is: %d\n",num1*num2);
         }
         else if(op=='4'){
-            printf("The division of the two numbers is: %d\n",num1/num2);
-            printf("The remainder is:%d\n",num1%num2);
+            printf("The division of the two numbers is: %d\nThe remainder is: %d\n",num1/num2,num1%num2);
+            //printf("The remainder is:%d\n",num1%num2);
         }
         else{
             printf("Exited!\n");
