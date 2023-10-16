@@ -21,7 +21,8 @@ int main() {
         scanf("%d %d",&num1,&num2);
         printf("First number is: %d\n",num1);
         printf("Second number is : %d\n",num2);
-        printf("Enter operation to be performed: Addition, Difference, Multiplication, Division or Remainder (1,2,3,4,5, 6 to exit)\n");
+        printf("Enter operation to be performed: Addition, Difference, Multiplication, Division  (1,2,3,4, Anything else to exit)\n");
+        //printf("Enter operation to be performed: Addition, Difference, Multiplication, Division or Remainder (1,2,3,4,5, 6 to exit)\n");
         op=getchar();
         if(op=='1'){
             printf("The sum of the two numbers is: %d\n",num1+num2);
