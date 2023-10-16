@@ -8,8 +8,7 @@
 
 void main() {
     stdio_init_all();
-    while (true) {
-        int num1,num2,op;
+    int num1,num2,op;
         printf("Enter first number: \n");
         scanf("%d",&num1);
         printf("First number is: %d\n",num1);
@@ -38,6 +37,8 @@ void main() {
         {
             printf("Exited!");
         }
+    while (true) {
+        
         sleep_ms(1000);
 
     }
