@@ -22,14 +22,15 @@ int main() {
         printf("Enter second number: \n");
         //num2=getchar();
         scanf("%d",&num2);
+        num2=getchar();
     //int num2_int = num2 - '0';
     //int result_num2 = num2_int + 1;    
         //num2 = getchar();
         printf("Second number is : %d\n",num2);
         printf("Enter operation to be performed: Addition, Difference, Multiplication, Division (1,2,3,4, 5 to exit)\n");
         //op=getchar();
-        scanf("%d",&op);
-        op = getchar();
+        scanf("%c",&op);
+        //op = getchar();
         if(op=='1'){
             //printf("The sum of the two numbers is: %d\n",result_num1+result_num2);
             printf("The sum of the two numbers is: %d\n",num1+num2);
