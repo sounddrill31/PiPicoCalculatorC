@@ -31,19 +31,23 @@ void main() {
         //scanf("%d",&op);
         op = getchar_timeout_us(uint32_t 1000);
         if(op=='1'){
-            printf("The sum of the two numbers is: %d\n",result_num1+result_num2);
+            //printf("The sum of the two numbers is: %d\n",result_num1+result_num2);
+            printf("The sum of the two numbers is: %d\n",num1+num2);
         }
         else if(op=='2'){
-            printf("The difference of the two numbers is: %d\n",result_num1-result_num2);
+            //printf("The difference of the two numbers is: %d\n",result_num1-result_num2);
+            printf("The difference of the two numbers is: %d\n",num1-num2);
         }
         else if(op=='3'){
-            printf("The multiplication of the two numbers is: %d\n",result_num1*result_num2);
+            //printf("The multiplication of the two numbers is: %d\n",result_num1*result_num2);
+            printf("The multiplication of the two numbers is: %d\n",num1*num2);
         }
         else if(op=='4'){
-            printf("The division of the two numbers is: %d\n",result_num2/result_num2);
+            //printf("The division of the two numbers is: %d\n",result_num2/result_num2);
+            printf("The division of the two numbers is: %d\n",num2/num2);
         }
         else{
-            printf("Exited!");
+            printf("Exited!\n");
         }
         sleep_ms(100);   
     }
