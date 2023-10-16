@@ -19,17 +19,17 @@ int main() {
     //int num1_int = num1 - '0';
     //int result_num1 = num1_int + 1;
         ch1 = getchar();
-        while (ch1 != '\n') { // Loop until newline
-        num1 = num1 * 10 + (ch1 - '0'); // Convert the character to a digit and add it to the number
-        ch1 = getchar(); // Read the next character
-    }
+                while (ch1 != '\n') { // Loop until newline
+                    num1 = num1 * 10 + (ch1 - '0'); // Convert the character to a digit and add it to the number
+                    ch1 = getchar(); // Read the next character
+                }
         printf("First number is: %d\n",num1);
         printf("Enter second number: \n");
         ch2=getchar();
-        while (ch2 != '\n') { // Loop until newline
-        num2 = num2 * 10 + (ch2 - '0'); // Convert the character to a digit and add it to the number
-        ch2 = getchar(); // Read the next character
-    }
+                while (ch2 != '\n') { // Loop until newline
+                    num2 = num2 * 10 + (ch2 - '0'); // Convert the character to a digit and add it to the number
+                    ch2 = getchar(); // Read the next character
+                }
         //scanf("%d",&num2);
     //int num2_int = num2 - '0';
     //int result_num2 = num2_int + 1;    
