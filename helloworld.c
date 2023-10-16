@@ -8,10 +8,9 @@
 
 void main() {
     stdio_init_all();
- 
+    int num1,num2,op;
     while (true) {
         //sleep_ms(100);
-    int num1,num2,op;
         printf("Enter first number: \n");
         num1=getchar();
         //scanf("%d",&num1);
