@@ -8,15 +8,20 @@
 
 void main() {
     stdio_init_all();
-    int num1,num2,op;
+    while (true) {
+        sleep_ms(1000);
+        int num1,num2,op;
         printf("Enter first number: \n");
-        scanf("%d",&num1);
+        num1=getchar_timeout_us(1000);
+        //scanf("%d",&num1);
         printf("First number is: %d\n",num1);
         printf("Enter second number: \n");
-        scanf("%d",&num2);
+        num2=getchar_timeout_us(1000);
+        //scanf("%d",&num2);
         printf("Second number is : %d\n",&num2);
         printf("Enter operation to be performed: Addition, Difference, Multiplication, Division (1,2,3,4, 5 to exit)\n");
-        scanf("%d",&op);
+        num3=getchar_timeout_us(1000);
+        //scanf("%d",&op);
         if(op==1)
         {
             printf("The sum of the two numbers is: %d\n",num1+num2);
@@ -37,8 +42,6 @@ void main() {
         {
             printf("Exited!");
         }
-    while (true) {
-        
         sleep_ms(1000);
 
     }
