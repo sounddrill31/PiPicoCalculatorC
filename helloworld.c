@@ -12,7 +12,7 @@ int main() {
     int num1,num2,op;
     num1=6;
     num2=7;
-    print("Program starting\n");
+    printf("Program starting\n");
     while (1) {
         printf("First number is: %d\n",num1);
         printf("Second number is : %d\n",num2);
