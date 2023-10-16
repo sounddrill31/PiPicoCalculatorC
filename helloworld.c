@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
-void main() {
+int main() {
     stdio_init_all();
     //char num1,num2,op;
     int num1,num2,op;
@@ -49,6 +49,7 @@ void main() {
         else{
             printf("Exited!\n");
         }
-        sleep_ms(100);   
+        //sleep_ms(100);
+        return 0;   
     }
 }
