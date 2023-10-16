@@ -8,9 +8,7 @@
 
 void main() {
     stdio_init_all();
-    while (true) {
-        sleep_ms(1000);
-        int num1,num2,op;
+    int num1,num2,op;
         printf("Enter first number: \n");
         num1=getchar_timeout_us(1000);
         //scanf("%d",&num1);
@@ -42,7 +40,10 @@ void main() {
         {
             printf("Exited!");
         }
-        sleep_ms(1000);
+        sleep_ms(100);
+    while (true) {
+        sleep_ms(100);
+        
 
     }
 }
