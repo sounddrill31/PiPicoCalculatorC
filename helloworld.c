@@ -5,15 +5,17 @@
  */
 #include <stdio.h>
 #include "pico/stdlib.h"
-
+//if the serial monitor doesn't show anything, blindly type the first number, press enter, second number and press enter
 int main() {
     stdio_init_all();
     //char num1,num2,op;
     int num1,num2,op;
-    num1=6;
-    num2=7;
+    //num1=6;
+    //num2=7;
     printf("Program starting\n");
     while (1) {
+        printf("Enter First and Second Numbers:\n");
+        scanf("%d %d",&num1,&num2);
         printf("First number is: %d\n",num1);
         printf("Second number is : %d\n",num2);
         printf("Enter operation to be performed: Addition, Difference, Multiplication, Division (1,2,3,4, 5 to exit)\n");
