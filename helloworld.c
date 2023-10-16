@@ -8,10 +8,13 @@
 //if the serial monitor doesn't show anything, blindly type the first number, press enter, second number and press enter
 int main() {
     stdio_init_all();
+        #if LIB_PICO_STDIO_USB && !defined( NDEBUG )
+        while ( !stdio_usb_connected() ) { sleep_ms(100); }
+        #endif
     int num1,num2,op;
     //num1=6;
     //num2=7;
-    printf("Program starting\n");
+    //printf("Program starting\n");
     while (1) {
         printf("Enter First and Second Numbers:\n");
         scanf("%d %d",&num1,&num2);
