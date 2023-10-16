@@ -11,7 +11,8 @@ int main() {
         //#if LIB_PICO_STDIO_USB && !defined( NDEBUG )
         //while ( !stdio_usb_connected() ) { sleep_ms(100); }
         //#endif
-    int num1,num2,op,rem;
+    int num1,num2,op;
+    //int rem;
     //num1=6;
     //num2=7;
     //printf("Program starting\n");
@@ -34,10 +35,10 @@ int main() {
         else if(op=='4'){
             printf("The division of the two numbers is: %d\n",num1/num2);
         }
-        else if(op=='5'){
-            rem=num1%num2;
-            printf("The remainder is: %d\n",rem);
-        }
+        //else if(op=='5'){
+        //    rem=num1%num2;
+        //    printf("The remainder is: %d\n",rem);
+        //}
         else{
             printf("Exited!\n");
         }
