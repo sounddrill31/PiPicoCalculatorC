@@ -14,7 +14,6 @@ void main() {
         printf("Enter first number: \n");
         scanf("%d",&num1);
         printf("First number is: %d\n",num1);
-        sleep_ms(1000);
         printf("Enter second number: \n");
         scanf("%d",&num2);
         printf("Second number is : %d\n",&num2);
@@ -28,10 +27,19 @@ void main() {
         {
             printf("The difference of the two numbers is: %d\n",num1-num2);
         }
+        else if(op==3)
+        {
+            printf("The multiplication of the two numbers is: %d\n",num1*num2);
+        }
+        else if(op==4)
+        {
+            printf("The division of the two numbers is: %d\n",num1/num2);
+        }
         else
         {
             printf("Exited!");
         }
-        
+        sleep_ms(1000);
+
     }
 }
