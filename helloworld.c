@@ -10,10 +10,14 @@
 void main() {
     stdio_init_all();
     while (true) {
-        int num1,num2;
+        int num1,num2,op;
         printf("Enter first number: ");
         scanf("%d",&num1);
         printf("First number is: %d",num1);
         sleep_ms(1000);
+        printf("Enter second number: ");
+        scanf("%d",&num2);
+        printf("Second number is : %d",&num2);
+        
     }
 }
