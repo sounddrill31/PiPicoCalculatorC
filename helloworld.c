@@ -20,7 +20,7 @@ void main() {
         //scanf("%d",&num2);
         printf("Second number is : %d\n",&num2);
         printf("Enter operation to be performed: Addition, Difference, Multiplication, Division (1,2,3,4, 5 to exit)\n");
-        num3=getchar_timeout_us(1000);
+        op=getchar_timeout_us(1000);
         //scanf("%d",&op);
         if(op==1)
         {
