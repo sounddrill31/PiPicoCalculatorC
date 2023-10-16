@@ -6,8 +6,11 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
-void main() {
+int main() {
     stdio_init_all();
+ 
+    while (true) {
+        sleep_ms(100);
     int num1,num2,op;
         printf("Enter first number: \n");
         num1=getchar_timeout_us(1000);
@@ -40,10 +43,6 @@ void main() {
         {
             printf("Exited!");
         }
-        sleep_ms(100);
-    while (true) {
-        sleep_ms(100);
-        
-
+        sleep_ms(100);   
     }
 }
