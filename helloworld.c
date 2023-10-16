@@ -17,7 +17,7 @@ void main() {
         //scanf("%d",&num1);
     //int num1_int = num1 - '0';
     //int result_num1 = num1_int + 1;
-        num1 = getchar());
+        num1 = getchar();
         printf("First number is: %d\n",num1);
         printf("Enter second number: \n");
         //num2=getchar();
