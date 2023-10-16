@@ -8,7 +8,7 @@
 
 void main() {
     stdio_init_all();
-    int num1,num2,op;
+    char num1,num2,op;
     while (true) {
         //sleep_ms(100);
         printf("Enter first number: \n");
@@ -22,24 +22,23 @@ void main() {
         printf("Enter operation to be performed: Addition, Difference, Multiplication, Division (1,2,3,4, 5 to exit)\n");
         op=getchar();
         //scanf("%d",&op);
-        if(op==1)
-        {
-            printf("The sum of the two numbers is: %d\n",num1+num2);
+    int num1_int = num1 - '0';
+    int result_num1 = num1_int + 1;
+    int num2_int = num2 - '0';
+    int result_num2 = num2_int + 1;    
+        if(op=='1'){
+            printf("The sum of the two numbers is: %d\n",result_num1+result_num2);
         }
-        else if(op==2)
-        {
-            printf("The difference of the two numbers is: %d\n",num1-num2);
+        else if(op=='2'){
+            printf("The difference of the two numbers is: %d\n",result_num1-result_num2);
         }
-        else if(op==3)
-        {
-            printf("The multiplication of the two numbers is: %d\n",num1*num2);
+        else if(op=='3'){
+            printf("The multiplication of the two numbers is: %d\n",result_num1*result_num2);
         }
-        else if(op==4)
-        {
-            printf("The division of the two numbers is: %d\n",num1/num2);
+        else if(op=='4'){
+            printf("The division of the two numbers is: %d\n",result_num2/result_num2);
         }
-        else
-        {
+        else{
             printf("Exited!");
         }
         sleep_ms(100);   
