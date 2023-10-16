@@ -3,7 +3,6 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-/*https://github.com/raspberrypi/pico-examples/blob/master/hello_world/serial/hello_serial.c*/
 #include <stdio.h>
 #include "pico/stdlib.h"
 
