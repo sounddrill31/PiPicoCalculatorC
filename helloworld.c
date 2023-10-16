@@ -10,7 +10,7 @@ void main() {
     stdio_init_all();
     //char num1,num2,op;
     int num1,num2,op;
-    while (!stdio_usb_connected()) {
+    while (stdio_usb_connected()) {
         //sleep_ms(100);
         printf("Enter first number: \n");
         //num1=getchar();
