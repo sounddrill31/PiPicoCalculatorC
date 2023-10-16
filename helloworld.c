@@ -35,7 +35,7 @@ int main() {
             printf("The division of the two numbers is: %d\n",num1/num2);
         }
         else if(op=='5'){
-            printf("The remainder is:%d\n",num1%num2);
+            printf("The remainder is: %d\n",num1%num2);
         }
         else{
             printf("Exited!\n");
