@@ -12,15 +12,14 @@ int main() {
         //while ( !stdio_usb_connected() ) { sleep_ms(100); }
         //#endif
     int num1,num2,op;
+    int i=1;
     char init_message[32];
     //int rem;
     //num1=6;
     //num2=7;
     //printf("Program starting\n");
     while (1) {
-        while(1){
-            return 0;
-        }
+        sleep_ms(1000);
         strcpy(init_message, "Enter First and Second Numbers: ");
         //printf("Enter First and Second Numbers:\n");
         puts(init_message);
