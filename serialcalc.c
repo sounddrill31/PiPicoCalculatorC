@@ -19,7 +19,6 @@ int main() {
     //num2=7;
     //printf("Program starting\n");
     while (1) {
-        //sleep_ms(1000);
         strcpy(init_message, "Enter First and Second Numbers: ");
         //printf("Enter First and Second Numbers:\n");
         puts(init_message);
