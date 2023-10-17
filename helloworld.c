@@ -17,7 +17,8 @@ int main() {
     //num2=7;
     //printf("Program starting\n");
     while (1) {
-        printf("Enter First and Second Numbers:\n");
+        //printf("Enter First and Second Numbers:\n");
+        puts("Enter First and Second Numbers:\n");
         scanf("%d %d",&num1,&num2);
         printf("First number is: %d\n",num1);
         printf("Second number is : %d\n",num2);
