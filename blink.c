@@ -9,6 +9,7 @@ int main() {
     gpio_set_dir(LED_PIN, GPIO_OUT);
     int number,i;
     while (true) {
+        printf("Enter number");
         scanf("%d",number);
         while(number>=i){
         gpio_put(LED_PIN, 1);
@@ -19,4 +20,5 @@ int main() {
         }
     }
 #endif
+return 0;
 }
