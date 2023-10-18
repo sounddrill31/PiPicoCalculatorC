@@ -1,5 +1,4 @@
 # PiPicoCalculatorC
-Simple pi pico calculator, made with C. It will support addition, substraction, multiplication and division and will show output on a real display.
-
+Enter number of times to blink via serial
 Building:
 ```https://gitpod.io/#https://github.com/sounddrill31/PiPicoCalculatorC```
