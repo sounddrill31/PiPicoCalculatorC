@@ -14,7 +14,7 @@ int main() {
     int num1,num2,op;
     int i=1;
     char init_message[32];
-    //int rem;
+    int rem;
     //num1=6;
     //num2=7;
     //printf("Program starting\n");
