@@ -4,7 +4,7 @@
 #include "pico/stdlib.h"
 
 uint columns[4] = { 11, 10, 9, 8 };
-uint rows[4] = { 15, 14, 13, 12 };
+uint rows[4] = { 15, 14, 7, 12 };
 char matrix[16] = {
     '1', '2' , '3', 'A',
     '4', '5' , '6', 'B',
