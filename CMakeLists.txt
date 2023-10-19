@@ -11,7 +11,7 @@ pico_sdk_init()
 add_executable(keypad
         keypad.c
         )
-add_library(keypadlib STATIC pico_keypad4x4.c)
+add_library(keypadlib STATIC keypad4x4/pico_keypad4x4.c)
 # pull in common dependencies
 target_link_libraries(keypad
     keypadlib

@@ -1,14 +1,3 @@
-/*
-|| @file pico_keypad4x4.h
-|| @version 0.2
-|| @author Oswaldo Hernandez, Owen Jauregui
-|| @contact oswahdez00@gmail.com
-||
-|| @description
-|| | This library provides a simple interface for using a 4x4 matrix
-|| | keypad with the Raspberry Pi Pico.
-*/
-
 #ifndef PICO_KEYPAD4X4_H
 #define PICO_KEYPAD4X4_H
 
