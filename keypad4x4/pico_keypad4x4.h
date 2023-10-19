@@ -2,7 +2,7 @@
 #define PICO_KEYPAD4X4_H
 
 //#include "../pico/stdlib.h"
-#include "../hardware/timer.h"
+//#include "../hardware/timer.h"
 
 void pico_keypad_init(uint columns[4], uint rows[4], char matrix_values[16]);
 
