@@ -1,5 +1,5 @@
 #include <stdio.h>
-//#include "hardware/timer.h"
+#include "hardware/timer.h"
 #include "keypad4x4/pico_keypad4x4.h"
 #include "pico/stdlib.h"
 
@@ -19,7 +19,7 @@ int main() {
     while (true) {
         key = pico_keypad_get_key();
         printf("Key pressed: %c\n", key);
-        //busy_wait_us(500000);
+        busy_wait_us(500000);
     }
 }
 

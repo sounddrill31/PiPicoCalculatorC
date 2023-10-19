@@ -14,11 +14,12 @@ add_executable(keypad
 add_library(keypadlib STATIC pico_keypad4x4.c)
 # pull in common dependencies
 target_link_libraries(keypad
-    pico_stdlib
-    hardware_timer
     keypadlib
 )
-
+target_link_libraries(keypadlib
+    pico_stdlib
+    hardware_timer
+)
 # create map/bin/hex/uf2 file etc.
 pico_add_extra_outputs(keypad)
 
