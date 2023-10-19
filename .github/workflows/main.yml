@@ -2,7 +2,7 @@ name: Compile Project
 on:
   push:
     branches:
-      - matrix-keypad-demo
+      - matrix-calc-demo
   pull_request:
   workflow_dispatch:
 
@@ -41,7 +41,7 @@ jobs:
         file: |
           build/*.uf2
         #  ${{steps.sign_app.outputs.signedReleaseFile}}
-        default_release_name: matrix keypad demo ${{ github.run_id }}
+        default_release_name: matrix serial calc demo ${{ github.run_id }}
         tag_name: ${{ github.run_id }}
         draft: false
       env:
