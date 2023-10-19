@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD 17)
 # Initialize the Pico SDK
 pico_sdk_init()
 add_executable(matrixkeypad
-        matrixkeypad.c
+        matrixkeypad1.c
         )
 add_library(matrixkeypad STATIC keypad4x4/pico_keypad4x4.c)
 # pull in common dependencies
