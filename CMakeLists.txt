@@ -11,9 +11,9 @@ pico_sdk_init()
 add_executable(matrixkeypad
         matrixkeypad1.c
         )
-add_library(matrixkeypad STATIC keypad4x4/pico_keypad4x4.c)
+add_library(keypad STATIC keypad4x4/pico_keypad4x4.c)
 # pull in common dependencies
-target_link_libraries(matrixkeypad
+target_link_libraries(keypad
     pico_stdlib
     hardware_timer
 )
