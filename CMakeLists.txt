@@ -8,23 +8,28 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 # Initialize the Pico SDK
 pico_sdk_init()
-add_executable(helloworld
-        helloworld.c
+add_executable(oled
+        oled.c
         )
+  add_subdirectory(pico-ssd1306)
+  target_link_libraries(oled
+  pico_ssd1306
+  # you will also need hardware i2c library for communication with the display
+  hardware_i2c)
 
 # pull in common dependencies
-target_link_libraries(helloworld pico_stdlib)
+target_link_libraries(oled pico_stdlib)
 
 # create map/bin/hex/uf2 file etc.
-pico_add_extra_outputs(helloworld)
+pico_add_extra_outputs(oled)
 
 # add url via pico_set_program_url
-# example_auto_set_url(helloworld)
+# example_auto_set_url(oled)
 #https://github.com/raspberrypi/pico-examples/blob/master/hello_world/serial/CMakeLists.txt
 
 # Enable USB stdio for the "test" target (used for serial communication)
-pico_enable_stdio_usb(helloworld 1)
+pico_enable_stdio_usb(oled 1)
 
 # Disable UART stdio for the "test" target
-pico_enable_stdio_uart(helloworld 0)
+pico_enable_stdio_uart(oled 0)
 #https://www.exasub.com/development-kit/raspberry-pi-pico/how-to-use-c-sdk-to-create-uf2-file-which-interface-ultrasonic-sensor-with-raspberry-pi-pico/
