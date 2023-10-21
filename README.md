@@ -4,4 +4,4 @@ Simple pi pico calculator, made with C. It will support addition, substraction, 
 Building:
 ```https://gitpod.io/#https://github.com/sounddrill31/PiPicoCalculatorC```
 
-Uses https://github.com/Harbys/pico-ssd1306
+Uses https://github.com/daschr/pico-ssd1306

@@ -28,3 +28,13 @@ pico_enable_stdio_usb(oled 1)
 # Disable UART stdio for the "test" target
 pico_enable_stdio_uart(oled 0)
 #https://www.exasub.com/development-kit/raspberry-pi-pico/how-to-use-c-sdk-to-create-uf2-file-which-interface-ultrasonic-sensor-with-raspberry-pi-pico/
+
+add_library(oledlib STATIC pico-ssd1306/ssd1306.c)
+target_link_libraries(oled
+    oledlib
+)
+target_link_libraries(oledlib
+    pico_stdlib
+    hardware_i2c
+    string
+)
