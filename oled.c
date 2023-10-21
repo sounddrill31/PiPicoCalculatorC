@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "pico-ssd1306/ssd1306.h"
-
+#include "pico-ssd1306/textRenderer/TextRenderer.h"
 int main() {
     stdio_init_all();
     i2c_init(I2C_PORT, 1000000); //Use i2c port with baud rate of 1Mhz

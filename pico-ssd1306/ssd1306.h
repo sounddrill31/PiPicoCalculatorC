@@ -3,7 +3,7 @@
 
 #include <string.h>
 #include "hardware/i2c.h"
-#include "pico-ssd1306/frameBuffer/FrameBuffer.h"
+#include "frameBuffer/FrameBuffer.h"
 
 namespace pico_ssd1306 {
     /// Register addresses from datasheet
