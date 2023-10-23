@@ -29,7 +29,7 @@ pico_enable_stdio_usb(oled 1)
 pico_enable_stdio_uart(oled 0)
 #https://www.exasub.com/development-kit/raspberry-pi-pico/how-to-use-c-sdk-to-create-uf2-file-which-interface-ultrasonic-sensor-with-raspberry-pi-pico/
 
-add_library(oledlib STATIC pico-ssd1306/ssd1306.c)
+add_library(oledlib STATIC ss_oled/ss_oled.c)
 target_link_libraries(oled
     oledlib
 )
