@@ -6,8 +6,7 @@
 /*https://github.com/raspberrypi/pico-examples/blob/master/hello_world/serial/hello_serial.c*/
 #include <stdio.h>
 #include "pico/stdlib.h"
-#include "pico-ssd1306/ssd1306.h"
-
+#include "ss_oled/ss_oled.h"
 int main() {
     stdio_init_all();
     while (true) {
