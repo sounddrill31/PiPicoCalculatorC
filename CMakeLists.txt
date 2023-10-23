@@ -13,7 +13,10 @@ add_executable(oled
         )
 
 # pull in common dependencies
-target_link_libraries(oled pico_stdlib)
+target_link_libraries(oled 
+        pico_stdlib
+        hardware_timer
+        )
 
 # create map/bin/hex/uf2 file etc.
 pico_add_extra_outputs(oled)
