@@ -1,12 +1,12 @@
 #include "pico/stdlib.h"
 #include "pico-ssd1306/ssd1306.h"
-#include "pico-ssd1306/textRenderer/TextRenderer.h"
+#include "pico-ssd1306/shapeRenderer/ShapeRenderer.h"
 #include "hardware/i2c.h"
 
 // Use the namespace for convenience
-//using namespace pico_ssd1306;
+using namespace pico_ssd1306;
 
-int main(){
+int main() {
     // Init i2c0 controller
     i2c_init(i2c0, 1000000);
     // Set up pins 12 and 13
@@ -27,13 +27,18 @@ int main(){
     // If your screen is upside down try setting it to 1 or 0
     display.setOrientation(0);
 
-    // Draw text on display
-    // After passing a pointer to display, we need to tell the function what font and text to use
-    // Available fonts are listed in textRenderer's readme
-    // Last we tell this function where to anchor the text
-    // Anchor means top left of what we draw
-    drawText(&display, font_12x16, "TEST text", 0 ,0);
+    // Draw an outline
+    drawRect(&display, 0, 0, 127, 63);
+
+    // Draw 2 rectangles
+    fillRect(&display, 0, 0, 63, 31);
+    fillRect(&display, 64, 32, 127, 63);
+
+    // Draw a line across the screen
+    drawLine(&display, 127, 0, 0, 63);
+
 
     // Send buffer to the display
     display.sendBuffer();
+
 }

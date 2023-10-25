@@ -4,9 +4,9 @@
 #include "hardware/i2c.h"
 
 // Use the namespace for convenience
-//using namespace pico_ssd1306;
+using namespace pico_ssd1306;
 
-int main(){
+int main() {
     // Init i2c0 controller
     i2c_init(i2c0, 1000000);
     // Set up pins 12 and 13
@@ -27,13 +27,14 @@ int main(){
     // If your screen is upside down try setting it to 1 or 0
     display.setOrientation(0);
 
-    // Draw text on display
-    // After passing a pointer to display, we need to tell the function what font and text to use
-    // Available fonts are listed in textRenderer's readme
-    // Last we tell this function where to anchor the text
-    // Anchor means top left of what we draw
-    drawText(&display, font_12x16, "TEST text", 0 ,0);
+    // Draw unrotated text
+    drawText(&display, font_8x8, "Text Normal", 16, 0);
+
+    // Draw text rotated by 90 degrees
+    drawText(&display, font_5x8, "Text Rotated", 0, 0, WriteMode::ADD, Rotation::deg90);
+
 
     // Send buffer to the display
     display.sendBuffer();
+
 }

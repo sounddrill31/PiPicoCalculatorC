@@ -1,12 +1,13 @@
 #include "pico/stdlib.h"
 #include "pico-ssd1306/ssd1306.h"
-#include "pico-ssd1306/textRenderer/TextRenderer.h"
 #include "hardware/i2c.h"
 
-// Use the namespace for convenience
-//using namespace pico_ssd1306;
+#pragma ide diagnostic ignored "EndlessLoop"
 
-int main(){
+// Use the namespace for convenience
+using namespace pico_ssd1306;
+
+int main() {
     // Init i2c0 controller
     i2c_init(i2c0, 1000000);
     // Set up pins 12 and 13
@@ -27,13 +28,23 @@ int main(){
     // If your screen is upside down try setting it to 1 or 0
     display.setOrientation(0);
 
-    // Draw text on display
-    // After passing a pointer to display, we need to tell the function what font and text to use
-    // Available fonts are listed in textRenderer's readme
-    // Last we tell this function where to anchor the text
-    // Anchor means top left of what we draw
-    drawText(&display, font_12x16, "TEST text", 0 ,0);
 
-    // Send buffer to the display
-    display.sendBuffer();
+    // variable to count on witch frame we are on
+    uint32_t frame_counter = 0;
+    // Infinite animation loop
+    while (1){
+
+        // Draw pixels spaced 8 px apart, one px lower every frame
+        for (uint8_t pass1 = 0; pass1 < 15; pass1 ++){
+            display.setPixel(pass1 * 8, frame_counter % 63);
+        }
+        // Send buffer to display
+        display.sendBuffer();
+        // Show the frame for 100ms
+        sleep_ms(100);
+        // Clear the buffer
+        display.clear();
+        // Increment frame counter
+        frame_counter ++;
+    }
 }

@@ -1,12 +1,11 @@
 #include "pico/stdlib.h"
 #include "pico-ssd1306/ssd1306.h"
-#include "pico-ssd1306/textRenderer/TextRenderer.h"
 #include "hardware/i2c.h"
 
 // Use the namespace for convenience
-//using namespace pico_ssd1306;
+using namespace pico_ssd1306;
 
-int main(){
+int main() {
     // Init i2c0 controller
     i2c_init(i2c0, 1000000);
     // Set up pins 12 and 13
@@ -27,12 +26,29 @@ int main(){
     // If your screen is upside down try setting it to 1 or 0
     display.setOrientation(0);
 
-    // Draw text on display
-    // After passing a pointer to display, we need to tell the function what font and text to use
-    // Available fonts are listed in textRenderer's readme
-    // Last we tell this function where to anchor the text
-    // Anchor means top left of what we draw
-    drawText(&display, font_12x16, "TEST text", 0 ,0);
+    // Create a variable storing our bitmap image
+    unsigned char image[] = {
+            0b00000001, 0b10000000,
+            0b00000001, 0b10000000,
+            0b00000011, 0b11000000,
+            0b00000010, 0b01000000,
+            0b00000110, 0b11100000,
+            0b00001100, 0b00110000,
+            0b00111001, 0b00011100,
+            0b11101000, 0b01000111,
+            0b11100010, 0b00000111,
+            0b00111000, 0b01011100,
+            0b00001100, 0b10110000,
+            0b00000110, 0b01100000,
+            0b00000011, 0b01000000,
+            0b00000011, 0b11000000,
+            0b00000001, 0b10000000,
+            0b00000001, 0b10000000
+    };
+
+
+    // Add image to buffer with anchor at point x: 10, y:10 and image width: 16 and height:16
+    display.addBitmapImage(10, 10, 16, 16, image);
 
     // Send buffer to the display
     display.sendBuffer();

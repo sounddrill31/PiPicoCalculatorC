@@ -4,7 +4,7 @@
 #include "hardware/i2c.h"
 
 // Use the namespace for convenience
-//using namespace pico_ssd1306;
+using namespace pico_ssd1306;
 
 int main(){
     // Init i2c0 controller

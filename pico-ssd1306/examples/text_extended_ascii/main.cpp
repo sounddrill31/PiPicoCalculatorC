@@ -1,10 +1,13 @@
+// Define SSD1306_ASCII_FULL to use full ascii range (32 - 255)
+#define SSD1306_ASCII_FULL
+
 #include "pico/stdlib.h"
 #include "pico-ssd1306/ssd1306.h"
 #include "pico-ssd1306/textRenderer/TextRenderer.h"
 #include "hardware/i2c.h"
 
 // Use the namespace for convenience
-//using namespace pico_ssd1306;
+using namespace pico_ssd1306;
 
 int main(){
     // Init i2c0 controller
@@ -32,7 +35,11 @@ int main(){
     // Available fonts are listed in textRenderer's readme
     // Last we tell this function where to anchor the text
     // Anchor means top left of what we draw
-    drawText(&display, font_12x16, "TEST text", 0 ,0);
+    // We use \x escape to use chars by their hex numeration according to the ASCII table
+    drawText(&display, font_5x8, "\x24 \xba \xb2", 0 ,0);
+    drawText(&display, font_8x8, "\x24 \xba \xb2", 0 ,10);
+    drawText(&display, font_12x16, "\x24 \xba \xb2", 0 ,20);
+    drawText(&display, font_16x32, "\x24 \xba \xb2", 0 ,36);
 
     // Send buffer to the display
     display.sendBuffer();

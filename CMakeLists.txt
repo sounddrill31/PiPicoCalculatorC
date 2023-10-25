@@ -15,7 +15,7 @@ add_executable(oled
 # pull in common dependencies
 target_link_libraries(oled 
         pico_stdlib
-        hardware_timer
+        hardware_i2c
         )
 
 # create map/bin/hex/uf2 file etc.
@@ -32,12 +32,8 @@ pico_enable_stdio_usb(oled 1)
 pico_enable_stdio_uart(oled 0)
 #https://www.exasub.com/development-kit/raspberry-pi-pico/how-to-use-c-sdk-to-create-uf2-file-which-interface-ultrasonic-sensor-with-raspberry-pi-pico/
 
-add_library(oledlib STATIC ss_oled/ss_oled.c)
-target_link_libraries(oled
-    oledlib
-)
-target_link_libraries(oledlib
-    pico_stdlib
-    hardware_i2c
-    string
-)
+  add_subdirectory(pico-ssd1306)
+  target_link_libraries(oled
+  pico_ssd1306
+  # you will also need hardware i2c library for communication with the display
+  hardware_i2c)
