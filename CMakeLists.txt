@@ -40,4 +40,4 @@ target_include_directories(oled
     PUBLIC
         ${CMAKE_CURRENT_LIST_DIR}/pico-ssd1306/examples
 )
- 
+ add_library(ssh1306 STATIC pico-ssd1306/ssh1306.c)
