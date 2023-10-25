@@ -10,6 +10,7 @@
 #include "example/bubblesstandard_font.h"
 #include "example/crackers_font.h"
 #include "example/BMSPA_font.h"
+#include "ssh1306.c"
 
 const uint8_t num_chars_per_disp[]={7,7,7,5};
 const uint8_t *fonts[4]= {acme_font, bubblesstandard_font, crackers_font, BMSPA_font};
