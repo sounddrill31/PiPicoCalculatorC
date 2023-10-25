@@ -34,6 +34,10 @@ pico_enable_stdio_uart(oled 0)
 
 target_include_directories(oled
     PUBLIC
-        ${CMAKE_CURRENT_LIST_DIR}/pico-ssd1306/
+        ${CMAKE_CURRENT_LIST_DIR}/pico-ssd1306
+)
+ target_include_directories(oled
+    PUBLIC
+        ${CMAKE_CURRENT_LIST_DIR}/pico-ssd1306/examples
 )
  
