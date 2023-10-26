@@ -11,7 +11,7 @@ pico_sdk_init()
 add_executable(oled
         oled.c
         )
-
+add_library(ssh1306 STATIC pico-ssd1306/ssh1306.c)
 # pull in common dependencies
 target_link_libraries(oled 
         pico_stdlib
@@ -40,4 +40,3 @@ target_include_directories(oled
     PUBLIC
         ${CMAKE_CURRENT_LIST_DIR}/pico-ssd1306/examples
 )
- add_library(ssh1306 STATIC ssh1306.c)
