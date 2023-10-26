@@ -18,6 +18,11 @@ target_link_libraries(oled
         hardware_i2c
         displaylib
         )
+target_link_libraries(displaylib
+    pico_stdlib
+    hardware_i2c
+    pico_binary_info
+)
 
 # create map/bin/hex/uf2 file etc.
 pico_add_extra_outputs(oled)
