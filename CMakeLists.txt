@@ -11,7 +11,7 @@ pico_sdk_init()
 add_executable(oled
         oled.c
         )
- add_library(displaylib STATIC pico-ssd1306/ssh1306.c)
+ add_library(displaylib PUBLIC pico-ssd1306/ssd1306.c)
 # pull in common dependencies
 target_link_libraries(oled 
         pico_stdlib
