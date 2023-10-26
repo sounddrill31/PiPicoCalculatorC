@@ -11,7 +11,7 @@ pico_sdk_init()
 add_executable(oled
         oled.c
         )
- add_library(displaylib PUBLIC pico-ssd1306/ssd1306.c)
+ add_library(displaylib STATIC pico-ssd1306/ssd1306.c)
 # pull in common dependencies
 target_link_libraries(oled 
         pico_stdlib
@@ -32,8 +32,3 @@ pico_enable_stdio_usb(oled 1)
 # Disable UART stdio for the "test" target
 pico_enable_stdio_uart(oled 0)
 #https://www.exasub.com/development-kit/raspberry-pi-pico/how-to-use-c-sdk-to-create-uf2-file-which-interface-ultrasonic-sensor-with-raspberry-pi-pico/
-
-target_include_directories(oled
-    PUBLIC
-        ${CMAKE_CURRENT_LIST_DIR}/
-)
