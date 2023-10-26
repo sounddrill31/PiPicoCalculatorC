@@ -47,7 +47,7 @@ void animation(void) {
 
     ssd1306_t disp;
     disp.external_vcc=false;
-    ssd1306_init(&disp, 128, 64, 0x3C, i2c1);
+    ssd1306_init(&disp, 128, 64, 0x78, i2c1);
     ssd1306_clear(&disp);
 
     printf("ANIMATION!\n");
