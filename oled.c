@@ -4,7 +4,7 @@
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
 
-#include "ssd1306.h"
+#include "pico-ssd1306/ssd1306.h"
 #include "example/image.h"
 #include "example/acme_5_outlines_font.h"
 #include "example/bubblesstandard_font.h"
