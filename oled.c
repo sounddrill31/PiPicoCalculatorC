@@ -5,11 +5,11 @@
 #include "hardware/i2c.h"
 
 #include "pico-ssd1306/ssd1306.h"
-#include "example/image.h"
-#include "example/acme_5_outlines_font.h"
-#include "example/bubblesstandard_font.h"
-#include "example/crackers_font.h"
-#include "example/BMSPA_font.h"
+#include "pico-ssd1306/example/image.h"
+#include "pico-ssd1306/example/acme_5_outlines_font.h"
+#include "pico-ssd1306/example/bubblesstandard_font.h"
+#include "pico-ssd1306/example/crackers_font.h"
+#include "pico-ssd1306/example/BMSPA_font.h"
 
 
 const uint8_t num_chars_per_disp[]={7,7,7,5};
