@@ -11,11 +11,12 @@ pico_sdk_init()
 add_executable(oled
         oled.c
         )
-# add_library(ssh1306 STATIC pico-ssd1306/ssh1306.c)
+ add_library(displaylib STATIC pico-ssd1306/ssh1306.c)
 # pull in common dependencies
 target_link_libraries(oled 
         pico_stdlib
         hardware_i2c
+        displaylib
         )
 
 # create map/bin/hex/uf2 file etc.
