@@ -35,8 +35,8 @@ int main() {
 
 void setup_gpios(void) {
     i2c_init(i2c1, 400000);
-    gpio_set_function(10, GPIO_FUNC_I2C);
-    gpio_set_function(11, GPIO_FUNC_I2C);
+    gpio_set_function(20, GPIO_FUNC_I2C);
+    gpio_set_function(21, GPIO_FUNC_I2C);
     gpio_pull_up(20);
     gpio_pull_up(21);
 }
