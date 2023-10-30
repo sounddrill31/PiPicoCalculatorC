@@ -40,7 +40,7 @@ int main() {
                     printf("Enter Second Number!\n");
                     num2c=pico_keypad_get_key();
                     num2=atoi(num2c);
-                    printf("%d - %d = %d",num1,num2,num1+num2);
+                    printf("%d - %d = %d",num1,num2,num1-num2);
                     break;
                 case "C": 
                     printf("Enter First Number!\n");
@@ -49,7 +49,7 @@ int main() {
                     printf("Enter Second Number!\n");
                     num2c=pico_keypad_get_key();
                     num2=atoi(num2c);
-                    printf("%d * %d = %d",num1,num2,num1+num2);
+                    printf("%d * %d = %d",num1,num2,num1*num2);
                     break;
                 case "D": 
                     printf("Enter First Number!\n");
@@ -58,7 +58,7 @@ int main() {
                     printf("Enter Second Number!\n");
                     num2c=pico_keypad_get_key();
                     num2=atoi(num2c);
-                    printf("%d / %d = %d",num1,num2,num1+num2);
+                    printf("%d / %d = %d",num1,num2,num1/num2);
                     break;
                 default:
                     printf("Invalid!\n");
