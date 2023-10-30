@@ -16,10 +16,51 @@ int main() {
     stdio_init_all();
     pico_keypad_init(columns, rows, matrix);
     char key;
+    int num1,num2;
     while (true) {
+        //printf("Key pressed: %c\n", key);
+        printf("Press a key!\n");
         key = pico_keypad_get_key();
-        printf("Key pressed: %c\n", key);
         busy_wait_us(500000);
+        switch(key)
+            {
+                case "A": 
+                    printf("Enter First Number!"\n);
+                    num1=pico_keypad_get_key();
+                    printf("Enter First Number!"\n);
+                    num1=pico_keypad_get_key();
+                    printf("Enter Second Number!"\n);
+                    num2=pico_keypad_get_key();
+                    printf("%d + %d = %d",num1,num2,num1+num2);
+                    break;
+                case "B": 
+                    printf("Enter First Number!"\n);
+                    num1=pico_keypad_get_key();
+                    printf("Enter First Number!"\n);
+                    num1=pico_keypad_get_key();
+                    printf("Enter Second Number!"\n);
+                    num2=pico_keypad_get_key();
+                    printf("%d - %d = %d",num1,num2,num1+num2);
+                    break;
+                case "C": 
+                    printf("Enter First Number!"\n);
+                    num1=pico_keypad_get_key();
+                    printf("Enter First Number!"\n);
+                    num1=pico_keypad_get_key();
+                    printf("Enter Second Number!"\n);
+                    num2=pico_keypad_get_key();
+                    printf("%d * %d = %d",num1,num2,num1+num2);
+                    break;
+                case "D": 
+                    printf("Enter First Number!"\n);
+                    num1=pico_keypad_get_key();
+                    printf("Enter First Number!"\n);
+                    num1=pico_keypad_get_key();
+                    printf("Enter Second Number!"\n);
+                    num2=pico_keypad_get_key();
+                    printf("%d / %d = %d",num1,num2,num1+num2);
+                    break;
+            }
     }
 }
 
