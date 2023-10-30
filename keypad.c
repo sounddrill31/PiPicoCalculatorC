@@ -15,17 +15,16 @@ char matrix[16] = {
 int main() {
     stdio_init_all();
     pico_keypad_init(columns, rows, matrix);
-   // char key, num1c,num2c;
+    char key, num1c,num2c;
     int num1,num2;
     while (true) {
-        char key, num1c,num2c;
         //printf("Key pressed: %c\n", key);
         printf("Enter Function!\n");
         key = pico_keypad_get_key();
         busy_wait_us(500000);
         switch(key)
             {
-                case "A":
+                case 'A':
                     printf("Enter First Number!\n");
                     num1c=pico_keypad_get_key();
                     num1=atoi(num1c);
@@ -34,7 +33,7 @@ int main() {
                     num2=atoi(num2c);
                     printf("%d + %d = %d",num1,num2,num1+num2);
                     break;
-                case "B": 
+                case 'B': 
                     printf("Enter First Number!\n");
                     num1c=pico_keypad_get_key();
                     num1=atoi(num1c);
@@ -43,7 +42,7 @@ int main() {
                     num2=atoi(num2c);
                     printf("%d - %d = %d",num1,num2,num1-num2);
                     break;
-                case "C": 
+                case 'C': 
                     printf("Enter First Number!\n");
                     num1c=pico_keypad_get_key();
                     num1=atoi(num1c);
@@ -52,7 +51,7 @@ int main() {
                     num2=atoi(num2c);
                     printf("%d * %d = %d",num1,num2,num1*num2);
                     break;
-                case "D": 
+                case 'D': 
                     printf("Enter First Number!\n");
                     num1c=pico_keypad_get_key();
                     num1=atoi(num1c);
