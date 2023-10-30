@@ -19,7 +19,7 @@ int main() {
     int num1,num2;
     while (true) {
         //printf("Key pressed: %c\n", key);
-        printf("Press a key!\n");
+        printf("Enter Function!\n");
         key = pico_keypad_get_key();
         busy_wait_us(500000);
         switch(key)
@@ -60,6 +60,8 @@ int main() {
                     num2=pico_keypad_get_key();
                     printf("%d / %d = %d",num1,num2,num1+num2);
                     break;
+                default:
+                    printf("Invalid!\n");
             }
     }
 }
