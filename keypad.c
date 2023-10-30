@@ -25,37 +25,37 @@ int main() {
         switch(key)
             {
                 case "A":
-                    printf("Enter First Number!"\n);
+                    printf("Enter First Number!\n");
                     num1c=pico_keypad_get_key();
                     num1=atoi(num1c);
-                    printf("Enter Second Number!"\n);
+                    printf("Enter Second Number!\n");
                     num2c=pico_keypad_get_key();
                     num2=atoi(num2c);
                     printf("%d + %d = %d",num1,num2,num1+num2);
                     break;
                 case "B": 
-                    printf("Enter First Number!"\n);
+                    printf("Enter First Number!\n");
                     num1c=pico_keypad_get_key();
                     num1=atoi(num1c);
-                    printf("Enter Second Number!"\n);
+                    printf("Enter Second Number!\n");
                     num2c=pico_keypad_get_key();
                     num2=atoi(num2c);
                     printf("%d - %d = %d",num1,num2,num1+num2);
                     break;
                 case "C": 
-                    printf("Enter First Number!"\n);
+                    printf("Enter First Number!\n");
                     num1c=pico_keypad_get_key();
                     num1=atoi(num1c);
-                    printf("Enter Second Number!"\n);
+                    printf("Enter Second Number!\n");
                     num2c=pico_keypad_get_key();
                     num2=atoi(num2c);
                     printf("%d * %d = %d",num1,num2,num1+num2);
                     break;
                 case "D": 
-                    printf("Enter First Number!"\n);
+                    printf("Enter First Number!\n");
                     num1c=pico_keypad_get_key();
                     num1=atoi(num1c);
-                    printf("Enter Second Number!"\n);
+                    printf("Enter Second Number!\n");
                     num2c=pico_keypad_get_key();
                     num2=atoi(num2c);
                     printf("%d / %d = %d",num1,num2,num1+num2);
