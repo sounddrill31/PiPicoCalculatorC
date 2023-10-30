@@ -15,9 +15,10 @@ char matrix[16] = {
 int main() {
     stdio_init_all();
     pico_keypad_init(columns, rows, matrix);
-    char key, num1c,num2c;
+   // char key, num1c,num2c;
     int num1,num2;
     while (true) {
+        char key, num1c,num2c;
         //printf("Key pressed: %c\n", key);
         printf("Enter Function!\n");
         key = pico_keypad_get_key();
