@@ -15,7 +15,7 @@ char matrix[16] = {
 int main() {
     stdio_init_all();
     pico_keypad_init(columns, rows, matrix);
-    char key;
+    char key, num1c,num2c;
     int num1,num2;
     while (true) {
         //printf("Key pressed: %c\n", key);
@@ -24,40 +24,40 @@ int main() {
         busy_wait_us(500000);
         switch(key)
             {
-                case "A": 
+                case "A":
                     printf("Enter First Number!"\n);
-                    num1=pico_keypad_get_key();
-                    printf("Enter First Number!"\n);
-                    num1=pico_keypad_get_key();
+                    num1c=pico_keypad_get_key();
+                    num1=atoi(num1c);
                     printf("Enter Second Number!"\n);
-                    num2=pico_keypad_get_key();
+                    num2c=pico_keypad_get_key();
+                    num2=atoi(num2c);
                     printf("%d + %d = %d",num1,num2,num1+num2);
                     break;
                 case "B": 
                     printf("Enter First Number!"\n);
-                    num1=pico_keypad_get_key();
-                    printf("Enter First Number!"\n);
-                    num1=pico_keypad_get_key();
+                    num1c=pico_keypad_get_key();
+                    num1=atoi(num1c);
                     printf("Enter Second Number!"\n);
-                    num2=pico_keypad_get_key();
+                    num2c=pico_keypad_get_key();
+                    num2=atoi(num2c);
                     printf("%d - %d = %d",num1,num2,num1+num2);
                     break;
                 case "C": 
                     printf("Enter First Number!"\n);
-                    num1=pico_keypad_get_key();
-                    printf("Enter First Number!"\n);
-                    num1=pico_keypad_get_key();
+                    num1c=pico_keypad_get_key();
+                    num1=atoi(num1c);
                     printf("Enter Second Number!"\n);
-                    num2=pico_keypad_get_key();
+                    num2c=pico_keypad_get_key();
+                    num2=atoi(num2c);
                     printf("%d * %d = %d",num1,num2,num1+num2);
                     break;
                 case "D": 
                     printf("Enter First Number!"\n);
-                    num1=pico_keypad_get_key();
-                    printf("Enter First Number!"\n);
-                    num1=pico_keypad_get_key();
+                    num1c=pico_keypad_get_key();
+                    num1=atoi(num1c);
                     printf("Enter Second Number!"\n);
-                    num2=pico_keypad_get_key();
+                    num2c=pico_keypad_get_key();
+                    num2=atoi(num2c);
                     printf("%d / %d = %d",num1,num2,num1+num2);
                     break;
                 default:
