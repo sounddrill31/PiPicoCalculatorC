@@ -21,6 +21,8 @@ int main() {
         //printf("Key pressed: %c\n", key);
         printf("Enter Function!\n");
         key = pico_keypad_get_key();
+        sleep_ms(1000);
+
         busy_wait_us(500000);
         switch(key)
             {
@@ -63,6 +65,7 @@ int main() {
                 default:
                     printf("Invalid!\n");
             }
+
     }
 }
 
