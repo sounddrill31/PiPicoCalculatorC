@@ -23,18 +23,18 @@ int main() {
         printf("Enter First Number!\n");
         num1c=pico_keypad_get_key();
         num1=atoi(num1c);
-        busy_wait_us(5000000000);
+        busy_wait_us(20000000);
         printf("Enter Second Number!\n");
         num2c=pico_keypad_get_key();
         num2=atoi(num2c);
-        busy_wait_us(500000000);
+        busy_wait_us(20000000);
         
 
         printf("Enter Function!\n");
         key = pico_keypad_get_key();
         sleep_ms(1000);
 
-        busy_wait_us(500000000);
+        busy_wait_us(20000000);
         switch(key)
             {
                 case 'A':
