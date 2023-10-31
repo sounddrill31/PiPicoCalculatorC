@@ -23,11 +23,13 @@ int main() {
         printf("Enter First Number!\n");
         num1c=pico_keypad_get_key();
         num1=atoi(num1c);
+        printf("Entered number is: %d \n",num1);
         busy_wait_us(2000000);
         printf("Enter Second Number!\n");
         num2c=pico_keypad_get_key();
         num2=atoi(num2c);
         busy_wait_us(2000000);
+        printf("Entered number is: %d \n",num2);
         
 
         printf("Enter Function!\n");
