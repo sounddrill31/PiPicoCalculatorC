@@ -17,6 +17,7 @@ int main() {
     pico_keypad_init(columns, rows, matrix);
     char key;
     while (true) {
+        printf("Enter key\n");
         key = pico_keypad_get_key();
         printf("Key pressed: %c\n", key);
         busy_wait_us(5000000);
