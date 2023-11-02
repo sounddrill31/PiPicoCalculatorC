@@ -19,7 +19,7 @@ int main() {
     while (true) {
         key = pico_keypad_get_key();
         printf("Key pressed: %c\n", key);
-        busy_wait_us(500000);
+        busy_wait_us(5000000);
     }
 }
 
