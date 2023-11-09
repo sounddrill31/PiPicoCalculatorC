@@ -21,7 +21,9 @@ int main() {
     while (true) {
         printf("Enter key\n");
         key = pico_keypad_get_key();
-        //sleep_us(5000000);        
+        change_state(key);
+        keypadWait = add_alarm_in_ms(1000, alarm_callback, NULL, true);
+        keypad_irq_enable(false, gpio_callback);
         printf("Key pressed: %c\n", key);
     }
 }
