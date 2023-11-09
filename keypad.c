@@ -19,8 +19,8 @@ int main() {
     while (true) {
         printf("Enter key\n");
         key = pico_keypad_get_key();
+        sleep_us(5000000);        
         printf("Key pressed: %c\n", key);
-        sleep_us(5000000);
     }
 }
 
