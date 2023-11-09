@@ -15,6 +15,8 @@ char matrix[16] = {
 int main() {
     stdio_init_all();
     pico_keypad_init(columns, rows, matrix);
+    keypad_irq_enable(true, gpio_callback);
+
     char key;
     while (true) {
         printf("Enter key\n");
