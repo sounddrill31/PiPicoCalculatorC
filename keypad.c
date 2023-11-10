@@ -22,7 +22,7 @@ int main() {
     char key;
     while (true) {
         printf("Enter key\n");
-        do { key = pico_keypad_get_key(); } while (time < endCheckingTime && key != 0);
+        do { key = pico_keypad_get_key(); } while (time_t < endCheckingTime && key != 0);
 
         //key = pico_keypad_get_key();
         //change_state(key);
