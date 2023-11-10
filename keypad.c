@@ -2,6 +2,7 @@
 #include "hardware/timer.h"
 #include "keypad4x4/pico_keypad4x4.h"
 #include "pico/stdlib.h"
+#include "pico/time.h"
 //void gpio_callback(uint gpio, uint32_t event);
 
 uint columns[4] = { 18, 19, 20, 21 };
@@ -16,7 +17,7 @@ char matrix[16] = {
 int main() {
     stdio_init_all();
     pico_keypad_init(columns, rows, matrix);
-    pico_keypad_irq_enable(true, gpio_callback);
+    //pico_keypad_irq_enable(true, gpio_callback);
 
     char key;
     while (true) {
