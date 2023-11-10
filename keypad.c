@@ -15,6 +15,8 @@ char matrix[16] = {
 };
 
 int main() {
+    int time=1;
+    int endCheckingTime=10;
     stdio_init_all();
     pico_keypad_init(columns, rows, matrix);
     //pico_keypad_irq_enable(true, gpio_callback);
@@ -22,7 +24,7 @@ int main() {
     char key;
     while (true) {
         printf("Enter key\n");
-        do { key = pico_keypad_get_key(); } while (time_t < endCheckingTime && key != 0);
+        do { key = pico_keypad_get_key(); time++; } while (time < endCheckingTime && key != 0);
 
         //key = pico_keypad_get_key();
         //change_state(key);
