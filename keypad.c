@@ -26,7 +26,7 @@ int main() {
         printf("Enter key\n");
         do { 
             key = pico_keypad_get_key(); time++; 
-        }while(time < endCheckingTime && key != 0);
+        }while(time < endCheckingTime && key != '');
 
 /*      key = pico_keypad_get_key();
         change_state(key);
