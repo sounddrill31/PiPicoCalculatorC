@@ -16,7 +16,7 @@ char matrix[16] = {
 
 int main() {
     int time=1;
-    int endCheckingTime=100000;
+    int endCheckingTime=1000000000000;
     stdio_init_all();
     pico_keypad_init(columns, rows, matrix);
     //pico_keypad_irq_enable(true, gpio_callback);
