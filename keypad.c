@@ -12,7 +12,7 @@ char matrix[16] = {
     '*', '0' , '#', 'D'
 };
 
-int scanner()
+char scanner()
 {
         int time=1;
         int endCheckingTime=100000000;    
