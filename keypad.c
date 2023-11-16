@@ -14,11 +14,12 @@ char matrix[16] = {
 
 int scanner()
 {
+        int time=1;
+        int endCheckingTime=100000000;    
         char key;
         printf("Enter key\n");
         do {     
-        int time=1;
-        int endCheckingTime=100000000;
+
         key = pico_keypad_get_key(); time++; 
         }while(time < endCheckingTime && key == NULL);
         return key;
