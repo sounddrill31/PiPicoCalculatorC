@@ -22,6 +22,7 @@ char scanner()
 
         key = pico_keypad_get_key(); time++; 
         }while(time < endCheckingTime && key == NULL);
+        busy_wait_us(500000);
         return key;
 }
 
