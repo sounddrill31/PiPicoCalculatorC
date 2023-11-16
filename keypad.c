@@ -34,7 +34,7 @@ int main() {
         keypad_irq_enable(false, gpio_callback);  */
         printf("Key pressed: %c\n", key);
         busy_wait_us(500000);
-        break;
+        //break;
     }
 }
 
