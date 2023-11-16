@@ -14,6 +14,7 @@ char matrix[16] = {
 
 int scanner()
 {
+        char key;
         printf("Enter key\n");
         do {     
         int time=1;
@@ -32,7 +33,7 @@ int main() {
     while (true) {
         busy_wait_us(20000000);        
         printf("Enter First Number!\n");
-        num1c= scanner();
+        num1c = scanner();
         num1=atoi(num1c);
         printf("Entered number is: %d \n",num1);
         busy_wait_us(2000000);
