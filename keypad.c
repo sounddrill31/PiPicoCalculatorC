@@ -5,8 +5,8 @@
 #include "pico/time.h"
 //void gpio_callback(uint gpio, uint32_t event);
 
-uint columns[4] = { 18, 19, 20, 21 };
-uint rows[4] = { 10, 11, 12, 15 };
+uint columns[4] = { 11, 10, 9, 8 };
+uint rows[4] = { 15, 14, 7, 12 };
 char matrix[16] = {
     '1', '2' , '3', 'A',
     '4', '5' , '6', 'B',
