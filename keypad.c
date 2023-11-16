@@ -17,7 +17,7 @@ char scanner()
         int time=1;
         int endCheckingTime=100000000;    
         char key;
-        printf("Enter key\n");
+        //printf("Enter key\n");
         do {     
 
         key = pico_keypad_get_key(); time++; 
