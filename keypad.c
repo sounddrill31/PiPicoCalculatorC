@@ -31,17 +31,16 @@ int main() {
 
     char key, num1c,num2c;
     int num1,num2;
-    while (true) {
-        busy_wait_us(20000000);        
+    while (true) {       
         printf("Enter First Number!\n");
         num1c = scanner();
         num1=atoi(num1c);
         printf("Entered number is: %d \n",num1);
-        busy_wait_us(2000000);
+        
         printf("Enter Second Number!\n");
         num2c= scanner();
         num2=atoi(num2c);
-        busy_wait_us(2000000);
+        
         printf("Entered number is: %d \n",num2);
         
 
@@ -49,7 +48,7 @@ int main() {
         key = scanner();
         //sleep_ms(1000);
 
-        busy_wait_us(20000000);
+        
         switch(key)
             {
                 case 'A':
