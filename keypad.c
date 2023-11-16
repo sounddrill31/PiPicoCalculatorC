@@ -36,6 +36,7 @@ int main() {
         busy_wait_us(500000);
         //break;
     }
+    busy_wait_us(500000);
 }
 
 //https://github.com/hhoswaldo/pico-keypad4x4
