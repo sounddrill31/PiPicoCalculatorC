@@ -15,23 +15,12 @@ char matrix[16] = {
 };
 
 int main() {
-    int time=1;
-    int endCheckingTime=100000000;
     stdio_init_all();
     pico_keypad_init(columns, rows, matrix);
-    //pico_keypad_irq_enable(true, gpio_callback);
-
     char key;
     while (true) {
         printf("Enter key\n");
-        do { 
-            key = pico_keypad_get_key(); time++; 
-        }while(time < endCheckingTime && key == NULL);
-
-/*      key = pico_keypad_get_key();
-        change_state(key);
-        keypadWait = add_alarm_in_ms(1000, alarm_callback, NULL, true);
-        keypad_irq_enable(false, gpio_callback);  */
+        key = pico_keypad_get_key_scanner();
         printf("Key pressed: %c\n", key);
         busy_wait_us(500000);
         //break;
@@ -40,3 +29,4 @@ int main() {
 }
 
 //https://github.com/hhoswaldo/pico-keypad4x4
+//https://github.com/sounddrill31/pico-keypad4x4-blocking
