@@ -48,7 +48,7 @@ void animation(void) {
     ssd1306_t disp;
     disp.external_vcc=false;
     ssd1306_init(&disp, 128, 64, 0x3C, i2c1);
-    ssd1306_clear(&disp);
+    //ssd1306_clear(&disp);
 
     printf("ANIMATION!\n");
 
@@ -57,7 +57,7 @@ void animation(void) {
             ssd1306_draw_string(&disp, 8, 24, 2, words[i]);
             //ssd1306_show(&disp);
             sleep_ms(800);
-            ssd1306_clear(&disp);
+            //ssd1306_clear(&disp);
         }
         //ssd1306_show(&disp);
         sleep_ms(2000);
