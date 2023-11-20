@@ -29,12 +29,12 @@ int main() {
     while (true) {       
         printf("Enter First Number!\n");
         num1c = pico_keypad_get_key_scanner()-num1c;
-        num1=num1c;
+        num1=(int)num1c;
         printf("Entered Number: %d \n",num1);
         
         printf("Enter Second Number!\n");
         num2c= pico_keypad_get_key_scanner()-num2c;
-        num2=num2c;
+        num2= (int)num2c;
         
         printf("Entered Number: %d \n",num2);
         
