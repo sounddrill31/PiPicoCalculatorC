@@ -62,4 +62,4 @@ void animation(void) {
         ssd1306_show(&disp);
         sleep_ms(2000);
     }
-}
+
