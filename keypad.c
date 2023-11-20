@@ -12,20 +12,6 @@ char matrix[16] = {
     '*', '0' , '#', 'D'
 };
 
-char scanner()
-{
-        int time=1;
-        int endCheckingTime=100000000;    
-        char key;
-        //printf("Enter key\n");
-        do {     
-
-        key = pico_keypad_get_key(); time++; 
-        }while(time < endCheckingTime && key == NULL);
-        busy_wait_us(500000);
-        return key;
-}
-
 int main() {
     stdio_init_all();
     pico_keypad_init(columns, rows, matrix);
@@ -34,19 +20,19 @@ int main() {
     int num1,num2;
     while (true) {       
         printf("Enter First Number!\n");
-        num1c = scanner();
+        num1c = pico_keypad_get_key_scanner();
         num1=atoi(num1c);
         printf("Entered number is: %d \n",num1);
         
         printf("Enter Second Number!\n");
-        num2c= scanner();
+        num2c= pico_keypad_get_key_scanner();
         num2=atoi(num2c);
         
         printf("Entered number is: %d \n",num2);
         
 
         printf("Enter Function!\n");
-        key = scanner();
+        key = pico_keypad_get_key_scanner();
         //sleep_ms(1000);
 
         
