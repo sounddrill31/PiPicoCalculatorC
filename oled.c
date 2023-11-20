@@ -46,7 +46,7 @@ void animation(void) {
     const char *words[]= {"SSD1306", "DISPLAY", "DRIVER"};
 
     ssd1306_t disp;
-    disp.external_vcc=false;
+    disp.external_vcc=true;
     ssd1306_init(&disp, 128, 64, 0x3C, i2c1);
     //ssd1306_clear(&disp);
 
