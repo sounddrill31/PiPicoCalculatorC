@@ -11,24 +11,32 @@ char matrix[16] = {
     '7', '8' , '9', 'C',
     '*', '0' , '#', 'D'
 };
+int convert(char a) {
+
+
+    int b = a - '0';  
+    return b;
+
+}
+
 
 int main() {
     stdio_init_all();
     pico_keypad_init(columns, rows, matrix);
 
-    char key, num1c,num2c;
+    char key, num1c='0',num2c='0';
     int num1,num2;
     while (true) {       
         printf("Enter First Number!\n");
-        num1c = pico_keypad_get_key_scanner();
-        num1=atoi(num1c);
-        printf("Entered number is: %d \n",num1);
+        num1c = pico_keypad_get_key_scanner()-num1c;
+        num1=num1c;
+        printf("Entered Number: %d \n",num1);
         
         printf("Enter Second Number!\n");
-        num2c= pico_keypad_get_key_scanner();
-        num2=atoi(num2c);
+        num2c= pico_keypad_get_key_scanner()-num2c;
+        num2=num2c;
         
-        printf("Entered number is: %d \n",num2);
+        printf("Entered Number: %d \n",num2);
         
 
         printf("Enter Function!\n");
