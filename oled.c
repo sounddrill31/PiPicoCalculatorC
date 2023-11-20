@@ -55,11 +55,11 @@ void animation(void) {
     char buf[8];
         for(int i=0; i<sizeof(words)/sizeof(char *); ++i) {
             ssd1306_draw_string(&disp, 8, 24, 2, words[i]);
-            ssd1306_show(&disp);
+            //ssd1306_show(&disp);
             sleep_ms(800);
             ssd1306_clear(&disp);
         }
-        ssd1306_show(&disp);
+        //ssd1306_show(&disp);
         sleep_ms(2000);
     }
 
