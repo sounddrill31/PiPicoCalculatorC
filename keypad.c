@@ -51,7 +51,7 @@ int main() {
                     printf("%d ^ %d = %d\n",num1,num2,(int)pow(num1,num2));
                     break;
                 case '#':
-                    printf("%d mod %d = %lf\n",num1,num2,num1%num2);
+                    printf("%d mod %d = %s\n",num1,num2,num1%num2?"Divisible":"Not Divisible");
                     break;
 
                 default:
