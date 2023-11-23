@@ -27,6 +27,7 @@ int main() {
         printf("Enter Function!\n");
         key = pico_keypad_get_key_scanner();
         //sleep_ms(1000);
+        printf("%c",key);
 
         printf("Enter Second Number!\n");
         num2c= pico_keypad_get_key_scanner()-'0';
