@@ -29,7 +29,7 @@ int main() {
         
         printf("Entered Number: %d \n",num2);
         
-
+    if(num1<=0 && num1>=9 && num2<=0 && num2 >= 9){
         printf("Enter Function!\n");
         key = pico_keypad_get_key_scanner();
         //sleep_ms(1000);
@@ -52,7 +52,7 @@ int main() {
                 default:
                     printf("Invalid!\n");
             }
-
+        }
     }
 }
 
