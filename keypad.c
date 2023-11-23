@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 #include "hardware/timer.h"
 #include "keypad4x4/pico_keypad4x4.h"
 #include "pico/stdlib.h"
@@ -46,6 +47,8 @@ int main() {
                 case 'D': 
                     printf("%d / %d = %lf\n",num1,num2,(double)num1/num2);
                     break;
+                case '*':
+                    printf("%d ^ %d = %d\n",num1,num2,(int)pow(num1,num2));
                 default:
                     printf("Invalid!\n");
             }
