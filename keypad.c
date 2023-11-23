@@ -15,16 +15,16 @@ int main() {
     stdio_init_all();
     pico_keypad_init(columns, rows, matrix);
 
-    char key, num1c='0',num2c='0';
+    char key, num1c,num2c;
     int num1,num2;
     while (true) {       
         printf("Enter First Number!\n");
-        num1c = pico_keypad_get_key_scanner()-num1c;
+        num1c = pico_keypad_get_key_scanner()-'0';
         num1=(int)num1c;
         printf("Entered Number: %d \n",num1);
         
         printf("Enter Second Number!\n");
-        num2c= pico_keypad_get_key_scanner()-num2c;
+        num2c= pico_keypad_get_key_scanner()-'0';
         num2= (int)num2c;
         
         printf("Entered Number: %d \n",num2);
