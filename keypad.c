@@ -52,7 +52,7 @@ int main() {
                     printf("%d ^ %d = %d\n",num1,num2,(int)pow(num1,num2));
                     break;
                 case '#':
-                    printf("%d mod %d = %s\n",num1,num2,num1%num2?"Divisible":"Not Divisible");
+                    printf("%d mod %d = %s\n",num1,num2,num1%num2==0?"Divisible":"Not Divisible");
                     break;
 
                 default:
