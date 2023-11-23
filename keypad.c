@@ -23,17 +23,14 @@ int main() {
         num1=(int)num1c;
         printf("Entered Number: %d \n",num1);
         
-        printf("Enter Second Number!\n");
-        num2c= pico_keypad_get_key_scanner()-'0';
-        num2= (int)num2c;
-        
-        printf("Entered Number: %d \n",num2);
-        
-
         printf("Enter Function!\n");
         key = pico_keypad_get_key_scanner();
         //sleep_ms(1000);
 
+        printf("Enter Second Number!\n");
+        num2c= pico_keypad_get_key_scanner()-'0';
+        num2= (int)num2c;
+        printf("Entered Number: %d \n",num2);
         
         switch(key)
             {
