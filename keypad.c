@@ -49,6 +49,11 @@ int main() {
                     break;
                 case '*':
                     printf("%d ^ %d = %d\n",num1,num2,(int)pow(num1,num2));
+                    break;
+                case '#':
+                    printf("%d mod %d = %lf\n",num1,num2,num1%num2);
+                    break;
+
                 default:
                     printf("Invalid!\n");
             }
