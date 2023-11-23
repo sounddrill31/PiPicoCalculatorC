@@ -38,16 +38,16 @@ int main() {
         switch(key)
             {
                 case 'A':
-                    printf("%d + %d = %d",num1,num2,num1+num2);
+                    printf("%d + %d = %d\n",num1,num2,num1+num2);
                     break;
                 case 'B': 
-                    printf("%d - %d = %d",num1,num2,num1-num2);
+                    printf("%d - %d = %d\n",num1,num2,num1-num2);
                     break;
                 case 'C': 
-                    printf("%d * %d = %d",num1,num2,num1*num2);
+                    printf("%d * %d = %d\n",num1,num2,num1*num2);
                     break;
                 case 'D': 
-                    printf("%d / %d = %d",num1,num2,num1/num2);
+                    printf("%d / %d = %d\n",num1,num2,num1/num2);
                     break;
                 default:
                     printf("Invalid!\n");
