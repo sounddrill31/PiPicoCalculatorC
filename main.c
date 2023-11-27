@@ -210,6 +210,7 @@ int main() {
         for (int m = 0; m < sizeof(message) / sizeof(message[0]); m += MAX_LINES) {
             for (int line = 0; line < MAX_LINES; line++) {
                 lcd_set_cursor(line, (MAX_CHARS / 2) - strlen(message[m + line]) / 2);
+                lcd_string(message[m + line]);
                 if(m==0){
                             num1c = pico_keypad_get_key_scanner()-'0';
                             num1=(int)num1c;
@@ -258,7 +259,6 @@ int main() {
 
                 }
                 else { break; }
-                lcd_string(message[m + line]);
             }
             sleep_ms(2000);
             lcd_clear();
