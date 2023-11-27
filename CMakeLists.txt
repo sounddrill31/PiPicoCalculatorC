@@ -8,16 +8,18 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 # Initialize the Pico SDK
 pico_sdk_init()
-add_executable(helloworld
-        helloworld.c
+add_executable(lcd_1602_i2c
+        lcd_1602_i2c.c
         )
 
-# pull in common dependencies
-target_link_libraries(helloworld pico_stdlib)
+# pull in common dependencies and additional i2c hardware support
+target_link_libraries(lcd_1602_i2c pico_stdlib hardware_i2c)
 
-# create map/bin/hex/uf2 file etc.
-pico_add_extra_outputs(helloworld)
+# create map/bin/hex file etc.
+pico_add_extra_outputs(lcd_1602_i2c)
 
+# add url via pico_set_program_url
+example_auto_set_url(lcd_1602_i2c)
 # add url via pico_set_program_url
 # example_auto_set_url(helloworld)
 #https://github.com/raspberrypi/pico-examples/blob/master/hello_world/serial/CMakeLists.txt

@@ -2,7 +2,7 @@ name: Compile Project
 on:
   push:
     branches:
-      - main
+      - 1602-i2c-display
   pull_request:
   workflow_dispatch:
 
@@ -42,6 +42,7 @@ jobs:
           build/*.uf2
         #  ${{steps.sign_app.outputs.signedReleaseFile}}
         tag_name: ${{ github.run_id }}
+        default_release_name: 1602 display demo ${{ github.run_id }}
         draft: false
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}    
