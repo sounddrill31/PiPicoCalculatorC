@@ -130,9 +130,6 @@ void lcd_init() {
 }
 
 int main() {
-#if !defined(i2c_default) || !defined(PICO_DEFAULT_I2C_SDA_PIN) || !defined(PICO_DEFAULT_I2C_SCL_PIN)
-    #warning i2c/lcd_1602_i2c example requires a board with I2C pins
-#else
     // This example will use I2C0 on the default SDA and SCL pins (4, 5 on a Pico)
     i2c_init(i2c1, 100 * 1000);
     gpio_set_function(2, GPIO_FUNC_I2C);
