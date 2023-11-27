@@ -175,14 +175,6 @@ int main() {
     char key, num1c,num2c;
     char str[10];
     int num1,num2;
-while (true) {
-        printf("Enter key\n");
-        key = pico_keypad_get_key_scanner();
-        printf("Key pressed: %c\n", key);
-        busy_wait_us(500000);
-    }
-    busy_wait_us(500000);
-
     #ifndef PICO_DEFAULT_LED_PIN
 #warning blink example requires a board with a regular LED
 #else
