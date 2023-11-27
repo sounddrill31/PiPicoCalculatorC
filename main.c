@@ -160,5 +160,4 @@ int main() {
             lcd_clear();
         }
     }
-#endif
 }
