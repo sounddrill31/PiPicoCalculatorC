@@ -141,10 +141,8 @@ void lcd_init() {
 int main() {
     stdio_init_all();
     pico_keypad_init(columns, rows, matrix);
-    char key;
     char key, num1c,num2c;
     int num1,num2;
-    char *message[];
 while (true) {
         printf("Enter key\n");
         key = pico_keypad_get_key_scanner();
