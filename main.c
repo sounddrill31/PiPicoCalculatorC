@@ -130,6 +130,7 @@ void lcd_init() {
 }
 
 int main() {
+    gpio_put(LED_PIN, 1);
     // This example will use I2C0 on the default SDA and SCL pins (4, 5 on a Pico)
     i2c_init(i2c1, 100 * 1000);
     gpio_set_function(2, GPIO_FUNC_I2C);
