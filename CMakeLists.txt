@@ -11,7 +11,15 @@ pico_sdk_init()
 add_executable(main
         main.c
         )
-
+add_library(keypadlib STATIC keypad4x4/pico_keypad4x4.c)
+# pull in common dependencies
+target_link_libraries(main
+    keypadlib
+)
+target_link_libraries(keypadlib
+    pico_stdlib
+    hardware_timer
+)
 # pull in common dependencies
 target_link_libraries(main pico_stdlib hardware_i2c)
 

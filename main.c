@@ -75,6 +75,15 @@ void i2c_write_byte(uint8_t val) {
 #endif
 }
 
+uint columns[4] = { 11, 10, 9, 8 }; 
+uint rows[4] = { 15, 14, 7, 12 };
+char matrix[16] = {
+    '1', '2' , '3', 'A',
+    '4', '5' , '6', 'B',
+    '7', '8' , '9', 'C',
+    '*', '0' , '#', 'D'
+};
+
 void lcd_toggle_enable(uint8_t val) {
     // Toggle enable pin on LCD display
     // We cannot do this too quickly or things don't work
@@ -130,6 +139,20 @@ void lcd_init() {
 }
 
 int main() {
+    stdio_init_all();
+    pico_keypad_init(columns, rows, matrix);
+    char key;
+    char key, num1c,num2c;
+    int num1,num2;
+    char *message[];
+while (true) {
+        printf("Enter key\n");
+        key = pico_keypad_get_key_scanner();
+        printf("Key pressed: %c\n", key);
+        busy_wait_us(500000);
+    }
+    busy_wait_us(500000);
+
     #ifndef PICO_DEFAULT_LED_PIN
 #warning blink example requires a board with a regular LED
 #else
@@ -147,24 +170,71 @@ int main() {
 
     lcd_init();
 
-    static char *message[] =
+  /*  static char *message[] =
             {
                     "RP2040 by", "Raspberry Pi",
                     "A brand new", "microcontroller",
                     "Twin core M0", "Full C SDK",
                     "More power in", "your product",
                     "More beans", "than Heinz!"
+            };*/
+       static char *message[] =
+            {
+                    "1st Number", "2nd Number",
+                    "Operation"
             };
 
     while (1) {
         for (int m = 0; m < sizeof(message) / sizeof(message[0]); m += MAX_LINES) {
             for (int line = 0; line < MAX_LINES; line++) {
                 lcd_set_cursor(line, (MAX_CHARS / 2) - strlen(message[m + line]) / 2);
+                if(m==0){
+                            num1c = pico_keypad_get_key_scanner()-'0';
+                            num1=(int)num1c;
+                            lcd_string(num1c+'0');
+                    continue;
+                }
+                else if(m==1){
+                            num2c = pico_keypad_get_key_scanner()-'0';
+                            num2=(int)num1c;
+                            lcd_string(num2c+'0');
+                    continue;
+                }
+                else if(m==2){
+                            key = pico_keypad_get_key_scanner();
+                            switch(key)
+                            {
+                case 'A':
+                    lcd_string(num1+num2);
+                    break;
+                case 'B': 
+                    lcd_string(num1-num2);
+                    break;
+                case 'C': 
+                    lcd_string(num1*num2);
+                    break;
+                case 'D': 
+                    lcd_string(num1%num2);
+                    break;
+                case '*':
+                    lcd_string(pow(num1,num2));
+                    break;
+                case '#':
+                    lcd_string(num1%num2==0?"Divisible":"Not Divisible"); 
+                    break;
+
+                default:
+                    break;                                
+                            }
+
+                }
                 lcd_string(message[m + line]);
             }
             sleep_ms(2000);
             lcd_clear();
         }
     }
+    
+
     #endif
 }
