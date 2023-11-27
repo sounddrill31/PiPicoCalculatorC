@@ -2,7 +2,7 @@ name: Compile Project
 on:
   push:
     branches:
-      - main
+      - final
   pull_request:
   workflow_dispatch:
 
@@ -41,6 +41,7 @@ jobs:
         file: |
           build/*.uf2
         #  ${{steps.sign_app.outputs.signedReleaseFile}}
+        default_release_name: Final project ${{ github.run_id }}
         tag_name: ${{ github.run_id }}
         draft: false
       env:
