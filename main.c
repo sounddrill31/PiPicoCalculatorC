@@ -142,6 +142,7 @@ int main() {
     stdio_init_all();
     pico_keypad_init(columns, rows, matrix);
     char key, num1c,num2c;
+    char str[10];
     int num1,num2;
 while (true) {
         printf("Enter key\n");
@@ -203,19 +204,26 @@ while (true) {
                             switch(key)
                             {
                 case 'A':
-                    lcd_string(num1+num2);
+                    tostring(str, num1+num2);
+
+                    lcd_string(str);
                     break;
                 case 'B': 
-                    lcd_string(num1-num2);
+                    tostring(str, num1-num2);
+                    lcd_string(str);
                     break;
                 case 'C': 
-                    lcd_string(num1*num2);
+                    tostring(str, num1*num2);
+                    lcd_string(str);
                     break;
                 case 'D': 
-                    lcd_string(num1%num2);
+                    tostring(str, num1/num2);
+                    lcd_string(num1/num2);
                     break;
                 case '*':
-                    lcd_string(pow(num1,num2));
+                    tostring(str, (int)pow(num1,num2));
+
+                    lcd_string(str);
                     break;
                 case '#':
                     lcd_string(num1%num2==0?"Divisible":"Not Divisible"); 
