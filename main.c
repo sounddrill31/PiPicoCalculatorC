@@ -214,13 +214,13 @@ int main() {
                             num1c = pico_keypad_get_key_scanner()-'0';
                             num1=(int)num1c;
                             lcd_string(num1c+'0');
-                    continue;
+                    break;
                 }
                 else if(m==1){
                             num2c = pico_keypad_get_key_scanner()-'0';
                             num2=(int)num1c;
                             lcd_string(num2c+'0');
-                    continue;
+                    break;
                 }
                 else if(m==2){
                             key = pico_keypad_get_key_scanner();
@@ -241,7 +241,7 @@ int main() {
                     break;
                 case 'D': 
                     tostring(str, num1/num2);
-                    lcd_string(num1/num2);
+                    lcd_string(str);
                     break;
                 case '*':
                     tostring(str, (int)pow(num1,num2));
@@ -257,6 +257,7 @@ int main() {
                             }
 
                 }
+                else { break; }
                 lcd_string(message[m + line]);
             }
             sleep_ms(2000);
