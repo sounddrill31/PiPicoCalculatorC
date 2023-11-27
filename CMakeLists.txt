@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD 17)
 # Initialize the Pico SDK
 pico_sdk_init()
 add_executable(lcd_1602_i2c
-        lcd_1602_i2c.c
+        1602.c
         )
 
 # pull in common dependencies and additional i2c hardware support
