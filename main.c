@@ -251,7 +251,7 @@ int main() {
                     lcd_string( str(pow(num1,num2)));
                     break;
                 case '#':
-                    lcd_string(num1%num2==0?"Divisible":"Not Divisible",1); 
+                    lcd_string(num1%num2==0?"Divisible":"Not Divisible"); 
                     break;
 
                 default:
