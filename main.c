@@ -265,11 +265,11 @@ int main() {
             lcd_clear();
         }
     }
-    while(1){
+    /*while(1){
                 lcd_string(pico_keypad_get_key_scanner());
 
 
-    }
+    }*/
 
     #endif
 }
