@@ -249,7 +249,7 @@ int main() {
                 case 'D': 
                     //tostring(str, num1/num2);
                     sprintf(str, "%d / %d = %d", num1,num2,num1/num2);
-                    lcd_string( str(num1/num2));
+                    lcd_string( str);
                     break;
                 case '*':
                     //tostring(str, (int)pow(num1,num2));
