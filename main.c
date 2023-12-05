@@ -210,7 +210,6 @@ int main() {
     while (1) {
         for (int m = 0; m < sizeof(message) / sizeof(message[0]); m += MAX_LINES) {
             for (int line = 0; line < MAX_LINES; line++) {
-                char output[];
                 lcd_set_cursor(line, (MAX_CHARS / 2) - strlen(message[m + line]) / 2);
                 lcd_string(message[m + line]);
                 if(m==0){
