@@ -9,6 +9,7 @@
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
 #include "pico/binary_info.h"
+#include <math.h>
 
 /* Example code to drive a 16x2 LCD panel via a I2C bridge chip (e.g. PCF8574)
 
@@ -214,13 +215,13 @@ int main() {
                 if(m==0){
                             num1c = pico_keypad_get_key_scanner()-'0';
                             num1=(int)num1c;
-                            lcd_string(str(num1), 1);
+                            lcd_string(str(num1));
                     break;
                 }
                 else if(m==1){
                             num2c = pico_keypad_get_key_scanner()-'0';
                             num2=(int)num2c;
-                            lcd_string(str(num2), 1);
+                            lcd_string(str(num2));
                     break;
                 }
                 else if(m==2){
@@ -230,24 +231,24 @@ int main() {
                 case 'A':
                     //tostring(str, num1+num2);
 
-                    lcd_string( str(num1+num2), 1);
+                    lcd_string( str(num1+num2));
                     break;
                 case 'B': 
                     //tostring(str, num1-num2);
-                    lcd_string( str(num1-num2), 1);
+                    lcd_string( str(num1-num2));
                     break;
                 case 'C': 
                     //tostring(str, num1*num2);
-                    lcd_string( str(num1*num2), 1);
+                    lcd_string( str(num1*num2));
                     break;
                 case 'D': 
                     //tostring(str, num1/num2);
-                    lcd_string( str(num1/num2), 1);
+                    lcd_string( str(num1/num2));
                     break;
                 case '*':
                     //tostring(str, (int)pow(num1,num2));
 
-                    lcd_string( str(pow(num1,num2)), 1);
+                    lcd_string( str(pow(num1,num2)));
                     break;
                 case '#':
                     lcd_string(num1%num2==0?"Divisible":"Not Divisible",1); 
