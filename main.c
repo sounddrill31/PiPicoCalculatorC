@@ -216,13 +216,13 @@ int main() {
                 if(m==0){
                             num1c = pico_keypad_get_key_scanner()-'0';
                             num1=(int)num1c;
-                            lcd_string("%d",num1);
+                            lcd_string(str(num1));
                     break;
                 }
                 else if(m==1){
                             num2c = pico_keypad_get_key_scanner()-'0';
                             num2=(int)num2c;
-                            lcd_string("%d",num2);
+                            lcd_string(str(num2));
                     break;
                 }
                 else if(m==2){
@@ -232,11 +232,11 @@ int main() {
                 case 'A':
                     //tostring(str, num1+num2);
                     
-                    lcd_string("%d",num1+num2);
+                    lcd_string( str(num1+num2));
                     break;
                 case 'B': 
                     //tostring(str, num1-num2);
-                    lcd_string( %d,num1-num2);
+                    lcd_string( str(num1-num2));
                     break;
                 case 'C': 
                     //tostring(str, num1*num2);
