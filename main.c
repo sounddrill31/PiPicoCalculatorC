@@ -174,7 +174,7 @@ int main() {
     stdio_init_all();
     pico_keypad_init(columns, rows, matrix);
     char key, num1c,num2c;
-    char str[10];
+    char str[50];
     int num1,num2;
     #ifndef PICO_DEFAULT_LED_PIN
 #warning blink example requires a board with a regular LED
@@ -216,13 +216,15 @@ int main() {
                 if(m==0){
                             num1c = pico_keypad_get_key_scanner()-'0';
                             num1=(int)num1c;
-                            lcd_string(str(num1));
+                            sprintf(str, "First Number = %d", num1);
+                            lcd_string(str);
                     break;
                 }
                 else if(m==1){
                             num2c = pico_keypad_get_key_scanner()-'0';
                             num2=(int)num2c;
-                            lcd_string(str(num2));
+                            sprintf(str, "Second Number = %d", num2);
+                            lcd_string(str);
                     break;
                 }
                 else if(m==2){
@@ -231,25 +233,28 @@ int main() {
                             {
                 case 'A':
                     //tostring(str, num1+num2);
-                    
-                    lcd_string( str(num1+num2));
+                    sprintf(str, "%d + %d = %d", num1,num2,num1+num2);
+                    lcd_string( str);
                     break;
                 case 'B': 
                     //tostring(str, num1-num2);
-                    lcd_string( str(num1-num2));
+                    sprintf(str, "%d - %d = %d", num1,num2,num1-num2);
+                    lcd_string( str);
                     break;
                 case 'C': 
                     //tostring(str, num1*num2);
-                    lcd_string( str(num1*num2));
+                    sprintf(str, "%d * %d = %d", num1,num2,num1*num2);
+                    lcd_string( str);
                     break;
                 case 'D': 
                     //tostring(str, num1/num2);
+                    sprintf(str, "%d / %d = %d", num1,num2,num1/num2);
                     lcd_string( str(num1/num2));
                     break;
                 case '*':
                     //tostring(str, (int)pow(num1,num2));
-
-                    lcd_string( str(pow(num1,num2)));
+                    sprintf(str, "%d ^ %d = %lf", num1,num2,pow(num1,num2));
+                    lcd_string( str);
                     break;
                 case '#':
                     lcd_string(num1%num2==0?"Divisible":"Not Divisible"); 
