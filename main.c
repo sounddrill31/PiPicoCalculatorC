@@ -206,7 +206,7 @@ int main() {
                     "Operation"
             };
 
-    /*while (1) {
+    while (1) {
         for (int m = 0; m < sizeof(message) / sizeof(message[0]); m += MAX_LINES) {
             for (int line = 0; line < MAX_LINES; line++) {
                 lcd_set_cursor(line, (MAX_CHARS / 2) - strlen(message[m + line]) / 2);
@@ -228,29 +228,29 @@ int main() {
                             switch(key)
                             {
                 case 'A':
-                    tostring(str, num1+num2);
+                    //tostring(str, num1+num2);
 
-                    lcd_string(str);
+                    lcd_string( str(num1+num2), 1);
                     break;
                 case 'B': 
-                    tostring(str, num1-num2);
-                    lcd_string(str);
+                    //tostring(str, num1-num2);
+                    lcd_string( str(num1-num2), 1);
                     break;
                 case 'C': 
-                    tostring(str, num1*num2);
-                    lcd_string(str);
+                    //tostring(str, num1*num2);
+                    lcd_string( str(num1*num2), 1);
                     break;
                 case 'D': 
-                    tostring(str, num1/num2);
-                    lcd_string(str);
+                    //tostring(str, num1/num2);
+                    lcd_string( str(num1/num2), 1);
                     break;
                 case '*':
-                    tostring(str, (int)pow(num1,num2));
+                    //tostring(str, (int)pow(num1,num2));
 
-                    lcd_string(str);
+                    lcd_string( str(pow(num1,num2)), 1);
                     break;
                 case '#':
-                    lcd_string(num1%num2==0?"Divisible":"Not Divisible"); 
+                    lcd_string(num1%num2==0?"Divisible":"Not Divisible",1); 
                     break;
 
                 default:
@@ -263,7 +263,7 @@ int main() {
             sleep_ms(2000);
             lcd_clear();
         }
-    }*/
+    }
     while(1){
                 lcd_string(pico_keypad_get_key_scanner());
 
