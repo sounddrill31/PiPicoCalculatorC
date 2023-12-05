@@ -214,13 +214,13 @@ int main() {
                 if(m==0){
                             num1c = pico_keypad_get_key_scanner()-'0';
                             num1=(int)num1c;
-                            lcd_string(num1c+'0');
+                            lcd_string(str(num1), 1);
                     break;
                 }
                 else if(m==1){
                             num2c = pico_keypad_get_key_scanner()-'0';
-                            num2=(int)num1c;
-                            lcd_string(num2c+'0');
+                            num2=(int)num2c;
+                            lcd_string(str(num2), 1);
                     break;
                 }
                 else if(m==2){
