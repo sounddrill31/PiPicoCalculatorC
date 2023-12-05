@@ -75,7 +75,7 @@ void i2c_write_byte(uint8_t val) {
     i2c_write_blocking(i2c_default, addr, &val, 1, false);
 #endif
 }
-
+//initializing the matrix keypad
 uint columns[4] = { 11, 10, 9, 8 }; 
 uint rows[4] = { 15, 14, 7, 12 };
 char matrix[16] = {
@@ -138,38 +138,6 @@ void lcd_init() {
     lcd_send_byte(LCD_DISPLAYCONTROL | LCD_DISPLAYON, LCD_COMMAND);
     lcd_clear();
 }
-void tostring(char str[], int num)
-{
-    int i, rem, len = 0, n;
- 
-    n = num;
-    while (n != 0)
-    {
-        len++;
-        n /= 10;
-    }
-    for (i = 0; i < len; i++)
-    {
-        rem = num % 10;
-        num = num / 10;
-        str[len - (i + 1)] = rem + '0';
-    }
-    str[len] = '\0';
-}
- 
-int toint(char str[])
-{
-    int len = strlen(str);
-    int i, num = 0;
- 
-    for (i = 0; i < len; i++)
-    {
-        num = num + ((str[len - (i + 1)] - '0') * pow(10, i));
-    }
- 
-   return num;
-}
-//credit to https://www.sanfoundry.com/c-program-integer-to-string-vice-versa/
 int main() {
     stdio_init_all();
     pico_keypad_init(columns, rows, matrix);
@@ -192,20 +160,11 @@ int main() {
     bi_decl(bi_2pins_with_func(PICO_DEFAULT_I2C_SDA_PIN, PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C));
 
     lcd_init();
-
-  /*  static char *message[] =
-            {
-                    "RP2040 by", "Raspberry Pi",
-                    "A brand new", "microcontroller",
-                    "Twin core M0", "Full C SDK",
-                    "More power in", "your product",
-                    "More beans", "than Heinz!"
-            };*/
        static char *message[] =
             {
                     "1st Number", "2nd Number",
                     "Operation"
-            };
+            }; //cycles through these messages
 
     while (1) {
         for (int m = 0; m < sizeof(message) / sizeof(message[0]); m += MAX_LINES) {
@@ -217,16 +176,16 @@ int main() {
                             num1=(int)num1c;
                             sprintf(str, "First Number = %d", num1);
                             lcd_string(str);
-                    break;
+                    break; //executed if program is checking for the first number. 
                 }
                 else if(m==1){
                             num2c = pico_keypad_get_key_scanner()-'0';
                             num2=(int)num2c;
                             sprintf(str, "Second Number = %d", num2);
-                            lcd_string(str);
+                            lcd_string(str); //executed if program is checking for the second number.
                     break;
                 }
-                else if(m==2){
+                else if(m==2){ //Takes inputs and does operations.
                             key = pico_keypad_get_key_scanner();
                             switch(key)
                             {
@@ -270,11 +229,6 @@ int main() {
             lcd_clear();
         }
     }
-    /*while(1){
-                lcd_string(pico_keypad_get_key_scanner());
-
-
-    }*/
-
     #endif
+    return 0;
 }
