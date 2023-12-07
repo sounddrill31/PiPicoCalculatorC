@@ -242,7 +242,7 @@ int main() {
                             }
 
                 }
-                else { break; }
+                else { continue; }
             }
             sleep_ms(2000);
             lcd_clear();
