@@ -172,7 +172,7 @@ int main() {
             for (int line = 0; line < MAX_LINES; line++) {
                 lcd_set_cursor(line, (MAX_CHARS / 2) - strlen(message[m + line]) / 2);
                 lcd_string(message[m + line]);
-                if(m==0){
+                if(m==1){
                             num1c = pico_keypad_get_key_scanner()-'0';
                             num1=(int)num1c;
                             sprintf(str, "%d", num1);
@@ -182,7 +182,7 @@ int main() {
                             lcd_clear();
                     break; //executed if program is checking for the first number. 
                 }
-                else if(m==1){
+                else if(m==2){
                             num2c = pico_keypad_get_key_scanner()-'0';
                             num2=(int)num2c;
                             sprintf(str, "%d", num2);
@@ -192,7 +192,7 @@ int main() {
                             lcd_clear();
                     break;
                 }
-                else if(m==2){ //Takes inputs and does operations.
+                else if(m==3){ //Takes inputs and does operations.
                             key = pico_keypad_get_key_scanner();
                             switch(key)
                             {
