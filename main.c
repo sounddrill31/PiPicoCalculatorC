@@ -197,29 +197,35 @@ int main() {
                 case 'A':
                     //tostring(str, num1+num2);
                     sprintf(str, "%d + %d = %d", num1,num2,num1+num2);
+                    lcd_clear();
                     lcd_string( str);
                     break;
                 case 'B': 
                     //tostring(str, num1-num2);
                     sprintf(str, "%d - %d = %d", num1,num2,num1-num2);
+                    lcd_clear();
                     lcd_string( str);
                     break;
                 case 'C': 
                     //tostring(str, num1*num2);
                     sprintf(str, "%d * %d = %d", num1,num2,num1*num2);
+                    lcd_clear();
                     lcd_string( str);
                     break;
                 case 'D': 
                     //tostring(str, num1/num2);
                     sprintf(str, "%d / %d = %d", num1,num2,num1/num2);
+                    lcd_clear();
                     lcd_string( str);
                     break;
                 case '*':
                     //tostring(str, (int)pow(num1,num2));
                     sprintf(str, "%d ^ %d = %lf", num1,num2,pow(num1,num2));
+                    lcd_clear();
                     lcd_string( str);
                     break;
                 case '#':
+                    lcd_clear();
                     lcd_string(num1%num2==0?"Divisible":"Not Divisible"); 
                     break;
 
