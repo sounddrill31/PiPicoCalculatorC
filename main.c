@@ -180,7 +180,7 @@ int main() {
                             //lcd_clear();
                             lcd_string(str);
                             lcd_clear();
-                    break; //executed if program is checking for the first number. 
+                    continue; //executed if program is checking for the first number. 
                 }
                 else if(m==2){
                             num2c = pico_keypad_get_key_scanner()-'0';
@@ -190,7 +190,7 @@ int main() {
                             //lcd_clear();
                             lcd_string(str); //executed if program is checking for the second number.
                             lcd_clear();
-                    break;
+                    continue;
                 }
                 else if(m==3){ //Takes inputs and does operations.
                             key = pico_keypad_get_key_scanner();
