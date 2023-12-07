@@ -10,6 +10,7 @@
 #include "hardware/i2c.h"
 #include "pico/binary_info.h"
 #include <math.h>
+#include "keypad4x4/pico_keypad4x4.h"
 
 /* Example code to drive a 16x2 LCD panel via a I2C bridge chip (e.g. PCF8574)
 
@@ -175,6 +176,7 @@ int main() {
                             num1c = pico_keypad_get_key_scanner()-'0';
                             num1=(int)num1c;
                             sprintf(str, "First Number = %d", num1);
+                            lcd_set_cursor(line,2);
                             lcd_string(str);
                     break; //executed if program is checking for the first number. 
                 }
@@ -182,6 +184,7 @@ int main() {
                             num2c = pico_keypad_get_key_scanner()-'0';
                             num2=(int)num2c;
                             sprintf(str, "Second Number = %d", num2);
+                            lcd_set_cursor(line,2);
                             lcd_string(str); //executed if program is checking for the second number.
                     break;
                 }
