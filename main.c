@@ -177,8 +177,9 @@ int main() {
                             num1=(int)num1c;
                             sprintf(str, "%d", num1);
                             //lcd_set_cursor(line,2);
-                            lcd_clear();
+                            //lcd_clear();
                             lcd_string(str);
+                            lcd_clear();
                     break; //executed if program is checking for the first number. 
                 }
                 else if(m==1){
@@ -186,8 +187,9 @@ int main() {
                             num2=(int)num2c;
                             sprintf(str, "%d", num2);
                             //lcd_set_cursor(line,2);
-                            lcd_clear();
+                            //lcd_clear();
                             lcd_string(str); //executed if program is checking for the second number.
+                            lcd_clear();
                     break;
                 }
                 else if(m==2){ //Takes inputs and does operations.
@@ -197,36 +199,42 @@ int main() {
                 case 'A':
                     //tostring(str, num1+num2);
                     sprintf(str, "%d + %d = %d", num1,num2,num1+num2);
-                    lcd_clear();
+                    //lcd_clear();
                     lcd_string( str);
+                    lcd_clear();
                     break;
                 case 'B': 
                     //tostring(str, num1-num2);
                     sprintf(str, "%d - %d = %d", num1,num2,num1-num2);
-                    lcd_clear();
+                    //lcd_clear();
                     lcd_string( str);
+                    lcd_clear();
                     break;
                 case 'C': 
                     //tostring(str, num1*num2);
                     sprintf(str, "%d * %d = %d", num1,num2,num1*num2);
-                    lcd_clear();
+                    //lcd_clear();
                     lcd_string( str);
+                    lcd_clear();
                     break;
                 case 'D': 
                     //tostring(str, num1/num2);
                     sprintf(str, "%d / %d = %d", num1,num2,num1/num2);
-                    lcd_clear();
+                    //lcd_clear();
                     lcd_string( str);
+                    lcd_clear();
                     break;
                 case '*':
                     //tostring(str, (int)pow(num1,num2));
                     sprintf(str, "%d ^ %d = %lf", num1,num2,pow(num1,num2));
-                    lcd_clear();
+                    //lcd_clear();
                     lcd_string( str);
+                    lcd_clear();
                     break;
                 case '#':
-                    lcd_clear();
+                    //lcd_clear();
                     lcd_string(num1%num2==0?"Divisible":"Not Divisible"); 
+                    lcd_clear();
                     break;
 
                 default:
