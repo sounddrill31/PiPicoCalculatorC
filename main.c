@@ -175,7 +175,7 @@ int main() {
                 if(m==0){
                             num1c = pico_keypad_get_key_scanner()-'0';
                             num1=(int)num1c;
-                            sprintf(str, "First Number = %d", num1);
+                            sprintf(str, "%d", num1);
                             lcd_set_cursor(line,2);
                             lcd_string(str);
                     break; //executed if program is checking for the first number. 
@@ -183,7 +183,7 @@ int main() {
                 else if(m==1){
                             num2c = pico_keypad_get_key_scanner()-'0';
                             num2=(int)num2c;
-                            sprintf(str, "Second Number = %d", num2);
+                            sprintf(str, "%d", num2);
                             lcd_set_cursor(line,2);
                             lcd_string(str); //executed if program is checking for the second number.
                     break;
